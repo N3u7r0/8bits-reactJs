@@ -1,0 +1,12 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    /* uso de la fuente en toda la app */
+    font-family:"Press Start 2P","system-us";
+    color:rgb(240, 152, 0);
+    font-size: medium;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
