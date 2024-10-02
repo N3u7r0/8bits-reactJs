@@ -8,9 +8,9 @@ export const LayoutMain = () => {
     <div className="layout">
       <BrowserRouter>
         <NavBar />
-        <header>
+        <main>
           <RouterMain />
-        </header>
+        </main>
       </BrowserRouter>
       <Footer />
     </div>

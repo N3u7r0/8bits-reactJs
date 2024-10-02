@@ -4,7 +4,7 @@ import "./styles/style.css";
 
 export const NavBar = () => {
   return (
-    <div className="nav-bar">
+    <nav>
       <Link to="/">
         <h1>8-bits</h1>
       </Link>
@@ -13,7 +13,7 @@ export const NavBar = () => {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/roms">Romms</Link>
+          <Link to="/roms">ROMs</Link>
         </li>
         <li>
           <Link to="/emuladores">Emuladores</Link>
@@ -25,6 +25,6 @@ export const NavBar = () => {
           <Link to="/gameplays">Gameplays</Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };

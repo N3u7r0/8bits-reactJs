@@ -1,4 +1,4 @@
-.nav-bar {
+nav {
   //position y bootom son para que se mantenga siempre en el top de la pag, el width es para que ocupe todo el ancho. (stycky para q no pise el header).
   position: sticky;
   top: 0;
@@ -9,7 +9,7 @@
   justify-content: space-between;
   background: linear-gradient(to right, black, rgba(200, 0, 250, 0.8));
   border-bottom: solid 0.5vh rgb(200, 0, 250);
-  
+
   h1 {
     margin: 1vh;
   }

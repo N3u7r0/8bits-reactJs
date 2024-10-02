@@ -1,0 +1,132 @@
+{
+  "roms": [
+    {
+      "consola": "Sega Genesis",
+      "roms": [
+        {
+          "id": 0,
+          "titulo": "Sonic the Hedgehog",
+          "lanzamiento": 1991,
+          "empresa": "Sega",
+          "foto": "",
+          "reseña": "Un juego de plataformas donde Sonic, un erizo azul, debe detener al malvado Dr. Robotnik.",
+          "link": ""
+        },
+        {
+          "id": 1,
+          "titulo": "Streets of Rage",
+          "lanzamiento": 1991,
+          "empresa": "Sega",
+          "foto": "",
+          "reseña": "Un juego de lucha callejera donde tres ex-policías luchan contra una organización criminal.",
+          "link": ""
+        },
+        {
+          "id": 2,
+          "titulo": "Golden Axe",
+          "lanzamiento": 1989,
+          "empresa": "Sega",
+          "foto": "",
+          "reseña": "Un juego de acción y aventura en un mundo de fantasía donde los héroes luchan contra el malvado Death Adder.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "consola": "Nes",
+      "roms": [
+        {
+          "id": 3,
+          "titulo": "Super Mario Bros.",
+          "lanzamiento": 1985,
+          "empresa": "Nintendo",
+          "foto": "",
+          "reseña": "Un juego de plataformas donde Mario debe rescatar a la Princesa Peach del malvado Bowser.",
+          "link": ""
+        },
+        {
+          "id": 4,
+          "titulo": "The Legend of Zelda",
+          "lanzamiento": 1986,
+          "empresa": "Nintendo",
+          "foto": "",
+          "reseña": "Un juego de aventura donde Link debe salvar a la Princesa Zelda y derrotar a Ganon.",
+          "link": ""
+        },
+        {
+          "id": 5,
+          "titulo": "Metroid",
+          "lanzamiento": 1986,
+          "empresa": "Nintendo",
+          "foto": "",
+          "reseña": "Un juego de acción y aventura donde Samus Aran lucha contra piratas espaciales y criaturas alienígenas.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "consola": "Neogeo",
+      "roms": [
+        {
+          "id": 6,
+          "titulo": "Metal Slug",
+          "lanzamiento": 1996,
+          "empresa": "SNK",
+          "foto": "",
+          "reseña": "Un juego de disparos y acción donde los jugadores luchan contra un ejército rebelde.",
+          "link": ""
+        },
+        {
+          "id": 7,
+          "titulo": "King of Fighters '98",
+          "lanzamiento": 1998,
+          "empresa": "SNK",
+          "foto": "",
+          "reseña": "Un juego de lucha que reúne a personajes de varias franquicias de SNK en un torneo épico.",
+          "link": ""
+        },
+        {
+          "id": 8,
+          "titulo": "Samurai Shodown II",
+          "lanzamiento": 1994,
+          "empresa": "SNK",
+          "foto": "",
+          "reseña": "Un juego de lucha con espadas ambientado en el Japón feudal, con una variedad de personajes únicos.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "consola": "PSX",
+      "roms": [
+        {
+          "id": 9,
+          "titulo": "Final Fantasy VII",
+          "lanzamiento": 1997,
+          "empresa": "Square Enix",
+          "foto": "",
+          "reseña": "Un juego de rol épico donde Cloud Strife y sus amigos luchan contra la corporación Shinra y el villano Sephiroth.",
+          "link": ""
+        },
+        {
+          "id": 10,
+          "titulo": "Resident Evil",
+          "lanzamiento": 1996,
+          "empresa": "Capcom",
+          "foto": "",
+          "reseña": "Un juego de survival horror donde los jugadores deben sobrevivir a un brote de zombis en una mansión.",
+          "link": ""
+        },
+        {
+          "id": 11,
+          "titulo": "Crash Bandicoot",
+          "lanzamiento": 1996,
+          "empresa": "Naughty Dog",
+          "foto": "",
+          "reseña": "Un juego de plataformas donde Crash Bandicoot debe detener al malvado Dr. Neo Cortex.",
+          "link": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-.nav-bar {
+nav {
   position: sticky;
   top: 0;
   width: 100%;
@@ -8,14 +8,14 @@
   background: linear-gradient(to right, black, rgba(200, 0, 250, 0.8));
   border-bottom: solid 0.5vh rgb(200, 0, 250);
 }
-.nav-bar h1 {
+nav h1 {
   margin: 1vh;
 }
-.nav-bar ul {
+nav ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.nav-bar ul li {
+nav ul li {
   margin: 1vh;
 }/*# sourceMappingURL=style.css.map */
