@@ -9,7 +9,7 @@
           "lanzamiento": 1991,
           "empresa": "Sega",
           "foto": "",
-          "reseña": "Un juego de plataformas donde Sonic, un erizo azul, debe detener al malvado Dr. Robotnik.",
+          "descripcion": "Un juego de plataformas donde Sonic, un erizo azul, debe detener al malvado Dr. Robotnik.",
           "link": ""
         },
         {
@@ -18,7 +18,7 @@
           "lanzamiento": 1991,
           "empresa": "Sega",
           "foto": "",
-          "reseña": "Un juego de lucha callejera donde tres ex-policías luchan contra una organización criminal.",
+          "descripcion": "Un juego de lucha callejera donde tres ex-policías luchan contra una organización criminal.",
           "link": ""
         },
         {
@@ -27,7 +27,7 @@
           "lanzamiento": 1989,
           "empresa": "Sega",
           "foto": "",
-          "reseña": "Un juego de acción y aventura en un mundo de fantasía donde los héroes luchan contra el malvado Death Adder.",
+          "descripcion": "Un juego de acción y aventura en un mundo de fantasía donde los héroes luchan contra el malvado Death Adder.",
           "link": ""
         }
       ]
@@ -41,7 +41,7 @@
           "lanzamiento": 1985,
           "empresa": "Nintendo",
           "foto": "",
-          "reseña": "Un juego de plataformas donde Mario debe rescatar a la Princesa Peach del malvado Bowser.",
+          "descripcion": "Un juego de plataformas donde Mario debe rescatar a la Princesa Peach del malvado Bowser.",
           "link": ""
         },
         {
@@ -50,7 +50,7 @@
           "lanzamiento": 1986,
           "empresa": "Nintendo",
           "foto": "",
-          "reseña": "Un juego de aventura donde Link debe salvar a la Princesa Zelda y derrotar a Ganon.",
+          "descripcion": "Un juego de aventura donde Link debe salvar a la Princesa Zelda y derrotar a Ganon.",
           "link": ""
         },
         {
@@ -59,7 +59,7 @@
           "lanzamiento": 1986,
           "empresa": "Nintendo",
           "foto": "",
-          "reseña": "Un juego de acción y aventura donde Samus Aran lucha contra piratas espaciales y criaturas alienígenas.",
+          "descripcion": "Un juego de acción y aventura donde Samus Aran lucha contra piratas espaciales y criaturas alienígenas.",
           "link": ""
         }
       ]
@@ -73,7 +73,7 @@
           "lanzamiento": 1996,
           "empresa": "SNK",
           "foto": "",
-          "reseña": "Un juego de disparos y acción donde los jugadores luchan contra un ejército rebelde.",
+          "descripcion": "Un juego de disparos y acción donde los jugadores luchan contra un ejército rebelde.",
           "link": ""
         },
         {
@@ -82,7 +82,7 @@
           "lanzamiento": 1998,
           "empresa": "SNK",
           "foto": "",
-          "reseña": "Un juego de lucha que reúne a personajes de varias franquicias de SNK en un torneo épico.",
+          "descripcion": "Un juego de lucha que reúne a personajes de varias franquicias de SNK en un torneo épico.",
           "link": ""
         },
         {
@@ -91,7 +91,7 @@
           "lanzamiento": 1994,
           "empresa": "SNK",
           "foto": "",
-          "reseña": "Un juego de lucha con espadas ambientado en el Japón feudal, con una variedad de personajes únicos.",
+          "descripcion": "Un juego de lucha con espadas ambientado en el Japón feudal, con una variedad de personajes únicos.",
           "link": ""
         }
       ]
@@ -105,7 +105,7 @@
           "lanzamiento": 1997,
           "empresa": "Square Enix",
           "foto": "",
-          "reseña": "Un juego de rol épico donde Cloud Strife y sus amigos luchan contra la corporación Shinra y el villano Sephiroth.",
+          "descripcion": "Un juego de rol épico donde Cloud Strife y sus amigos luchan contra la corporación Shinra y el villano Sephiroth.",
           "link": ""
         },
         {
@@ -114,7 +114,7 @@
           "lanzamiento": 1996,
           "empresa": "Capcom",
           "foto": "",
-          "reseña": "Un juego de survival horror donde los jugadores deben sobrevivir a un brote de zombis en una mansión.",
+          "descripcion": "Un juego de survival horror donde los jugadores deben sobrevivir a un brote de zombis en una mansión.",
           "link": ""
         },
         {
@@ -123,7 +123,7 @@
           "lanzamiento": 1996,
           "empresa": "Naughty Dog",
           "foto": "",
-          "reseña": "Un juego de plataformas donde Crash Bandicoot debe detener al malvado Dr. Neo Cortex.",
+          "descripcion": "Un juego de plataformas donde Crash Bandicoot debe detener al malvado Dr. Neo Cortex.",
           "link": ""
         }
       ]
