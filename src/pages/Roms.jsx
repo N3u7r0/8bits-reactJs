@@ -6,10 +6,12 @@ export const Roms = () => {
   const { roms } = UseRoms();
     console.log(roms);
     
+    
     return (
       <div className="container-global">
         <h2>Roms</h2>
-        <ItemListContainer items={roms} />
+        {/* renderizo el itemlistcontainer con la coleccion de roms en forma de prop para que el componente sea reutilizable. */} 
+        <ItemListContainer roms={roms} />
       </div>
     )
   }

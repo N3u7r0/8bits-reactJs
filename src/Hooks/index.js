@@ -1,2 +1,2 @@
 export * from "./UseRoms";
-export * from "./UseRomsById";
+export * from "./useRomsById";
