@@ -1,8 +1,19 @@
+h2 {
+  text-align: center;
+  margin: 1vh;
+  margin: 5px 40px 5px 40px;
+  align-content: center;
+  padding: 0.5vh;
+  border: solid 0.5vh rgb(200, 0, 250);
+  background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
+}
 .container-global {
-  
-  h2 {
-    text-align: center;
-  }
-
-  
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 5px 40px 5px 40px;
+  align-content: center;
+  min-height: 85vh;
+  background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
+  border: solid 0.5vh rgb(200, 0, 250);
 }

@@ -1,9 +1,10 @@
 import "./styles/style.css";
 
 export const Gameplays = () => {
-    return (
-      <div className="container-global">
+  return (
+    <>
         <h2>Gameplays</h2>
-      </div>
-    )
-  }
+      <div className="container-global"></div>
+    </>
+  );
+};

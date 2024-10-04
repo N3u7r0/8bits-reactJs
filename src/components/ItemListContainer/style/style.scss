@@ -1,0 +1,25 @@
+
+.contenedor-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+ 
+  justify-content: center;
+  background-color: aquamarine;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 10px;
+  padding: 0.6vh;
+  gap: 0.5vh;
+  width: 35vh;
+  background-color: rgba(200, 0, 250, 0.4);
+  border: solid 0.25vh rgb(200, 0, 250);
+}
+
+.contenedor-ul .card:last-child {
+  margin-left: auto;
+}

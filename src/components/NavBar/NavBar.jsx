@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+//import { createRomsFirestore } from  "../../helper/index";
 
 import "./styles/style.css";
 
@@ -24,7 +25,10 @@ export const NavBar = () => {
         <li>
           <Link to="/gameplays">Gameplays</Link>
         </li>
+        
       </ul>
+
+      {/* <button onClick={() => createRomsFirestore()}>subir a firestone</button> */}
     </nav>
   );
 };
