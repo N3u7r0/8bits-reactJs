@@ -7,7 +7,7 @@ export const Roms = () => {
 
   return (
     <>
-      <h2>Roms</h2>
+      <h2 className="tituloPrincipal">Roms</h2>
       <div className="container-global">
         {/* renderizo el itemlistcontainer con la coleccion de roms en forma de prop para que el componente sea reutilizable. */}
         <ItemListContainer roms={roms} />

@@ -3,8 +3,8 @@ import "./style/style.css";
 export const ItemListContainer = ({ roms }) => {
   return (
     <>
-      <div className="item-list-container">
-        {/* card */}
+     
+      <div className="div-flex">
         <div className="contenedor-ul">
         {roms.map((rom) => (
           <ul key={rom.id} className="card">
@@ -26,7 +26,8 @@ export const ItemListContainer = ({ roms }) => {
           </ul>
         ))}
         </div>
-      </div>
+
+        </div>
     </>
   );
 };

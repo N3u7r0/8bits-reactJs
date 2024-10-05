@@ -1,25 +1,33 @@
+.div-flex {
 
-.contenedor-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
- 
-  justify-content: center;
-  background-color: aquamarine;
-}
+  .contenedor-ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, auto); /* 2 columnas en pantallas más pequeñas */
+    }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 10px;
-  padding: 0.6vh;
-  gap: 0.5vh;
-  width: 35vh;
-  background-color: rgba(200, 0, 250, 0.4);
-  border: solid 0.25vh rgb(200, 0, 250);
-}
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
 
-.contenedor-ul .card:last-child {
-  margin-left: auto;
+    .card {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: 10px;
+      padding: 0.6vh;
+      gap: 0.5vh;
+      max-width: 60vh;
+      background-color: rgba(200, 0, 250, 0.4);
+      border: solid 0.25vh rgb(200, 0, 250);
+      box-shadow: 4px 5px 10px 1px rgb(0, 0, 0,0.8);
+    }
+
+    .card:hover {
+      box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764); 
+      background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
+    }
+  }
 }
