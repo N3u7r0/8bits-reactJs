@@ -20,8 +20,8 @@ export const ItemListContainer = ({ roms }) => {
             <li>
               <p>{rom.lanzamiento}</p>
             </li>
-            <ul>
-              <botton>Ver mas</botton>
+            <ul className="btn">
+              <botton type="button">Link</botton>
             </ul>
           </ul>
         ))}
