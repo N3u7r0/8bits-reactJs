@@ -1,9 +1,9 @@
 import { ItemListContainer } from "../components";
-import { UseRoms } from "../Hooks";
+//import { UseRoms } from "../Hooks";
 import "./styles/style.css";
-
+import roms from "../data/roms.json";
 export const Roms = () => {
-  const { roms } = UseRoms();
+  //const { roms } = UseRoms();
 
   return (
     <>

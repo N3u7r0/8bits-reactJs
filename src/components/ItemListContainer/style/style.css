@@ -42,7 +42,8 @@
 .div-flex .contenedor-ul .card:hover {
   background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
   box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
-  transition: box-shadow 0.7s;
+  margin: 0.01vh;
+  transition: box-shadow 0.7s, margin 0.4s;
 }
 .div-flex .contenedor-ul .card .btn:hover {
   background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));

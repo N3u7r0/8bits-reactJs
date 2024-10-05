@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "titulo": "Sonic the Hedgehog",
     "lanzamiento": 1991,
     "empresa": "Sega",
@@ -10,6 +11,7 @@
     "consola": "Sega Genesis"
   },
   {
+    "id": 1,
     "titulo": "Streets of Rage",
     "lanzamiento": 1991,
     "empresa": "Sega",
@@ -20,6 +22,7 @@
     "consola": "Sega Genesis"
   },
   {
+    "id": 2,
     "titulo": "Golden Axe",
     "lanzamiento": 1989,
     "empresa": "Sega",
@@ -30,6 +33,7 @@
     "consola": "Sega Genesis"
   },
   {
+    "id": 3,
     "titulo": "Super Mario Bros.",
     "lanzamiento": 1985,
     "empresa": "Nintendo",
@@ -40,6 +44,7 @@
     "consola": "Nes"
   },
   {
+    "id": 4,
     "titulo": "The Legend of Zelda",
     "lanzamiento": 1986,
     "empresa": "Nintendo",
@@ -50,6 +55,7 @@
     "consola": "Nes"
   },
   {
+    "id": 5,
     "titulo": "Metroid",
     "lanzamiento": 1986,
     "empresa": "Nintendo",
@@ -60,6 +66,7 @@
     "consola": "Nes"
   },
   {
+    "id": 6,
     "titulo": "Metal Slug",
     "lanzamiento": 1996,
     "empresa": "SNK",
@@ -70,6 +77,7 @@
     "consola": "Neogeo"
   },
   {
+    "id": 7,
     "titulo": "King of Fighters '98",
     "lanzamiento": 1998,
     "empresa": "SNK",
@@ -80,6 +88,7 @@
     "consola": "Neogeo"
   },
   {
+    "id": 8,
     "titulo": "Samurai Shodown II",
     "lanzamiento": 1994,
     "empresa": "SNK",
@@ -90,6 +99,7 @@
     "consola": "Neogeo"
   },
   {
+    "id": 9,
     "titulo": "Final Fantasy VII",
     "lanzamiento": 1997,
     "empresa": "Square Enix",
@@ -100,6 +110,7 @@
     "consola": "PSX"
   },
   {
+    "id": 10,
     "titulo": "Resident Evil",
     "lanzamiento": 1996,
     "empresa": "Capcom",
@@ -110,6 +121,7 @@
     "consola": "PSX"
   },
   {
+    "id": 11,
     "titulo": "Crash Bandicoot",
     "lanzamiento": 1996,
     "empresa": "Naughty Dog",

@@ -11,7 +11,7 @@ export const NavBar = () => {
       </Link>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/"><p>Home</p></Link>
         </li>
         <li>
           <Link to="/roms">ROMs</Link>
