@@ -1,14 +1,18 @@
-8-bits reactJs.
-Developer: Brian Sabatini.
+## 8-bits reactJs.
+# Developer: Brian Sabatini.
 
 Dependencias
 
 Copiar
-npm i sass
-npm react-router
-npm react-router-dom
+# npm i
+# npm i sass
+# npm react-router
+# npm react-router-dom
 
 ---
+
+para correr:
+# npm run dev
 
 ## Recomendado leer antes de usar o visualizar la app.
 
@@ -41,6 +45,7 @@ Las fuentes son de Google y están conectadas en el head del index.html. Los h1 
 
 Concepto
 La idea es que el proyecto tenga la posibilidad de ser escalable y de fácil mantenimiento, por eso se eligió React. Se hace hincapié en el uso de estilos sin librerías de UI, pero posiblemente se use swal2 en algún momento para agilizar un poco.
+se trata de matener la semantica html correcta para una mejor lectura y calificacion.
 
 ¡Muchas gracias por echarle un ojo!
 
