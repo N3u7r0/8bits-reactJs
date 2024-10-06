@@ -5,12 +5,12 @@
 }
 @media (max-width: 900px) {
   .div-flex .contenedor-ul {
-    grid-template-columns: repeat(2, auto); /* 2 columnas en pantallas más pequeñas */
+    grid-template-columns: repeat(2, auto); /* 2 columnas de cards más chicas */
   }
 }
 @media (max-width: 600px) {
   .div-flex .contenedor-ul {
-    grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    grid-template-columns: 1fr; /* 1 columna de card */
   }
 }
 .div-flex .contenedor-ul .card {
@@ -27,17 +27,26 @@
   align-items: center;
   justify-content: center;
 }
+.div-flex .contenedor-ul .card p {
+  display: flex;
+  margin: 1px 15px 1px 15px;
+}
 .div-flex .contenedor-ul .card .btn {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1px 2px;
   background: linear-gradient(to top, black, rgb(50, 2, 112));
-  border: none;
   cursor: pointer;
   height: 2.5vh;
   width: 30%;
   border-radius: 100px;
+  margin: 0%;
+}
+.div-flex .contenedor-ul .card .btn button {
+  background-color: rgb(50, 2, 112);
+  border: none;
+  background: none;
 }
 .div-flex .contenedor-ul .card:hover {
   background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));

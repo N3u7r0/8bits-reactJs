@@ -9,9 +9,10 @@ export const NavBar = () => {
       <Link to="/">
         <h1>8-bits</h1>
       </Link>
+
       <ul>
         <li>
-          <Link to="/"><p>Home</p></Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/roms">ROMs</Link>
@@ -25,7 +26,6 @@ export const NavBar = () => {
         <li>
           <Link to="/gameplays">Gameplays</Link>
         </li>
-        
       </ul>
 
       {/* <button onClick={() => createRomsFirestore()}>subir a firestone</button> */}

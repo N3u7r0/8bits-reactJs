@@ -1,17 +1,18 @@
-import React from "react";
 import { Spin } from "../Spin";
 import "./style/style.css";
 
 export const ItemListContainer = ({ roms }) => {
-  
-  return roms?.length === 0 ? (<Spin />): (
+
+  return roms?.length === 0 ? (
+    <Spin />
+  ) : (
     <>
       <div className="div-flex">
         <div className="contenedor-ul">
           {roms.map((rom) => (
             <ul key={rom.id} className="card">
               <li>
-                <h2>{rom.titulo}</h2>
+                <h3>{rom.titulo}</h3>
               </li>
               <li>
                 <p>{rom.descripcion}</p>
@@ -22,9 +23,8 @@ export const ItemListContainer = ({ roms }) => {
               <li>
                 <p>{rom.lanzamiento}</p>
               </li>
-              <ul className="btn">
-                <button type="button">Link</button>{" "}
-                {/* Corrigiendo la etiqueta */}
+              <ul className="btn" >
+                <button type="button">Link</button>
               </ul>
             </ul>
           ))}

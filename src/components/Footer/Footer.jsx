@@ -3,7 +3,7 @@ import "./styles/style.css";
 export const Footer = () => {
   return (
     <footer>
-      <p>esto va a ser un un footer</p>
+      <h2>esto va a ser un un footer</h2> 
     </footer>
   );
 };
