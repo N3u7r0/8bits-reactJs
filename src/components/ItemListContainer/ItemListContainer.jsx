@@ -2,7 +2,6 @@ import { Spin } from "../Spin";
 import "./style/style.css";
 
 export const ItemListContainer = ({ roms }) => {
-
   return roms?.length === 0 ? (
     <Spin />
   ) : (
@@ -23,8 +22,8 @@ export const ItemListContainer = ({ roms }) => {
               <li>
                 <p>{rom.lanzamiento}</p>
               </li>
-              <ul className="btn" >
-                <button type="button">Link</button>
+              <ul>
+                <button type="button" className="btn">Link</button>
               </ul>
             </ul>
           ))}

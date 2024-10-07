@@ -1,7 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import { Home, Emuladores, Gameplays, Roms, Trucos } from "../pages";
+import { ItemListContainer,ItemDetailContainer } from "../components";
+
 
 export const RouterMain = () => {
+
+  
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -9,6 +13,8 @@ export const RouterMain = () => {
       <Route path="/emuladores" element={<Emuladores />} />
       <Route path="/trucos" element={<Trucos />} />
       <Route path="/gameplays" element={<Gameplays />} />
+      <Route path="/roms/:categoria" element={<ItemListContainer  />} />
+      <Route path="/roms/:id" element={<ItemDetailContainer  />} />
     </Routes>
   );
 };

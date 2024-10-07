@@ -46,7 +46,7 @@ Sass encargado de todos los estilos del div de h1 y todos los bordes y backgroun
 Las fuentes son de Google y están conectadas en el head del index.html. Los h1 y h2 son los que reciben la fuente full color. Las fuentes son de uso global en el proyecto.
 <br>
 Concepto<br>
-La idea es que el proyecto tenga la posibilidad de ser escalable y de fácil mantenimiento, por eso se eligió React. Se hace hincapié en el uso de estilos sin librerías de UI, pero posiblemente se use swal2 en algún momento para agilizar un poco.
+La idea es que el proyecto tenga la posibilidad de ser escalable y de fácil mantenimiento y full responsive. Se hace hincapié en el uso de estilos sin librerías de UI, pero posiblemente se use swal2 en algún momento para agilizar un poco.
 se trata de matener la semantica html correcta para una mejor lectura y calificacion.<br>
 <br>
 ¡Muchas gracias por echarle un ojo!<br>

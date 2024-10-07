@@ -12,19 +12,27 @@ export const NavBar = () => {
 
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <button type="reset">Home</button>
+          </Link>
         </li>
         <li>
-          <Link to="/roms">ROMs</Link>
+          <Link to="/roms">
+            <button type="button">ROMs</button>
+          </Link>
         </li>
         <li>
-          <Link to="/emuladores">Emuladores</Link>
+          <Link to="/emuladores">
+            <button type="button">Emuladores</button>
+          </Link>
         </li>
         <li>
-          <Link to="/trucos">Trucos</Link>
+          <Link to="/trucos"><button type="button">Trucos</button></Link>
         </li>
         <li>
-          <Link to="/gameplays">Gameplays</Link>
+          <Link to="/gameplays">
+            <button type="button">Gameplays</button>
+          </Link>
         </li>
       </ul>
 

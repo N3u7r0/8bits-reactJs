@@ -1,6 +1,6 @@
 .tituloPrincipal {
   text-align: center;
-  
+
   margin: 17px 40px 5px 40px;
   align-content: center;
   padding: 0.5vh;
@@ -16,4 +16,21 @@
   min-height: 85vh;
   background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
   border: solid 0.5vh rgb(200, 0, 250);
+}
+
+// navBar roms!
+// cancelo los stilos que no quiero de la etiqueta <nav> del componente roms (los etilos de la etiqueta estan declarados en nabBar.jsx).
+.nav-itemListContainer {
+  position: static;
+  box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.5vh;
+  h6 {
+    margin-left: 1vh;
+  }
+  ul {
+    margin: 0%;
+  }
 }

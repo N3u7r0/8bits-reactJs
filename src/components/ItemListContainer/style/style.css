@@ -39,14 +39,10 @@
   background: linear-gradient(to top, black, rgb(50, 2, 112));
   cursor: pointer;
   height: 2.5vh;
-  width: 30%;
+  width: 115%;
   border-radius: 100px;
   margin: 0%;
-}
-.div-flex .contenedor-ul .card .btn button {
-  background-color: rgb(50, 2, 112);
-  border: none;
-  background: none;
+  transition: 0.2s;
 }
 .div-flex .contenedor-ul .card:hover {
   background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
@@ -56,6 +52,9 @@
 }
 .div-flex .contenedor-ul .card .btn:hover {
   background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
-  box-shadow: 0px 0px 10px 1px rgba(200, 0, 250, 0.5);
-  transition: box-shadow 0.2s;
+  box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
+  transition: box-shadow 0.17s;
+}
+.div-flex .contenedor-ul .card .btn:active {
+  box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
 }/*# sourceMappingURL=style.css.map */
