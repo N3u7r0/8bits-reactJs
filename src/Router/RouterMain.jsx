@@ -13,7 +13,7 @@ export const RouterMain = () => {
       <Route path="/emuladores" element={<Emuladores />} />
       <Route path="/trucos" element={<Trucos />} />
       <Route path="/gameplays" element={<Gameplays />} />
-      <Route path="/roms/:categoria" element={<ItemListContainer  />} />
+      <Route path="/roms/:consola" element={<ItemListContainer  />} />
       <Route path="/roms/:id" element={<ItemDetailContainer  />} />
     </Routes>
   );

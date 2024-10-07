@@ -1,12 +1,10 @@
 import { ItemListContainer } from "../components";
-
-//import { UseRoms } from "../Hooks";
-import "./styles/style.css";
-import roms from "../data/roms.json";
 import { Link } from "react-router-dom";
-export const Roms = () => {
-  //const { roms } = UseRoms();
+import "./styles/style.css";
+import { UseRoms } from "../Hooks";
 
+export const Roms = () => {
+  const { roms } = UseRoms();
   return (
     <>
       <h2 className="tituloPrincipal">Roms</h2>
