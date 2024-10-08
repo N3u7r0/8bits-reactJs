@@ -1,10 +1,44 @@
-import { ItemListContainer } from "../components";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { ItemListContainer } from "../components";
+import { useRoms } from "../Hooks";
 import "./styles/style.css";
-import { UseRoms } from "../Hooks";
 
 export const Roms = () => {
-  const { roms } = UseRoms();
+  const { roms } = useRoms();
+  const [romsFiltrados, setRomsFiltrados] = useState([]);
+  const { consola } = useParams("");
+console.log(consola);
+
+  useEffect(() => {
+    let filteredRoms = roms;
+    console.log(filteredRoms);
+    
+    switch (consola) {
+      case "nes":
+        filteredRoms = roms.filter((rom) => rom.consola === "nes");
+        setRomsFiltrados(filteredRoms)
+        break;
+      case "sega":
+        filteredRoms = roms.filter((rom) => rom.consola === "sega");
+        setRomsFiltrados(filteredRoms)
+        break;
+      case "neogeo":
+        filteredRoms = roms.filter((rom) => rom.consola === "neogeo");
+        setRomsFiltrados(filteredRoms)
+        break;
+      case "psx":
+        filteredRoms = roms.filter((rom) => rom.consola === "psx");
+        setRomsFiltrados(filteredRoms)
+        break;
+      default:
+        filteredRoms = roms;
+        break;
+    }
+    setRomsFiltrados(filteredRoms);
+  }, [ roms, consola ]);
+
   return (
     <>
       <h2 className="tituloPrincipal">Roms</h2>
@@ -39,9 +73,7 @@ export const Roms = () => {
             </li>
           </ul>
         </nav>
-
-        {/* renderizo el itemlistcontainer con la coleccion de roms en forma de prop para que el componente sea reutilizable. */}
-        <ItemListContainer roms={roms} />
+        <ItemListContainer romsFiltrados={romsFiltrados} />
       </div>
     </>
   );

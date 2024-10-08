@@ -1,37 +1,45 @@
 .div-flex {
   .contenedor-ul {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-
-    @media (max-width: 900px) {
-      grid-template-columns: repeat(
-        2,
-        auto
-      ); /* 2 columnas de cards más chicas */
-    }
-
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr; /* 1 columna de card */
-    }
+    grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
 
     .card {
       display: flex;
       flex-direction: column;
       text-align: center;
-      margin: 10px;
-      padding: 0.6vh;
-      gap: 0.5vh;
+      margin: 1.5vh;
       max-width: 60vh;
       background-color: rgba(200, 0, 250, 0.4);
       border: solid 0.25vh rgb(200, 0, 250);
-      box-shadow: 4px 5px 10px 1px rgb(0, 0, 0, 0.8);
-      align-items: center;
-      justify-content: center;
+      box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
+      transition: box-shadow 0.7s, margin 0.4s; // Mueve la transición aquí
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+      }
 
       .img-card {
-        max-width: 90%;
-        border: solid 0.25vh rgb(200, 0, 250, 0.8);
-        transition: 0.7s;
+        max-width: 94%;
+        border: solid 0.25vh rgba(200, 0, 250, 0.8);
+        transition: border 0.7s, box-shadow 0.7s;
+
+        &:hover {
+          border: solid 0.4vh rgb(200, 0, 250);
+          box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
+          border-radius: 25px;
+          transition: all 0.5s;
+        }
+      }
+
+      p {
+        text-align: left;
+        margin: 1% 4% 2% 4%;
+        width: auto;
+        height: 15vh;
+        overflow: auto;
       }
 
       .btn {
@@ -42,32 +50,26 @@
         background: linear-gradient(to top, black, rgb(50, 2, 112));
         cursor: pointer;
         height: 2.5vh;
-        width: 115%;
+        width: 140px;
         border-radius: 100px;
-        margin: 0%;
-        transition: 0.2s;
+        margin-bottom: 1vh;
+        transition: box-shadow, 0.7s;
+        &:hover {
+          background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
+          box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
+          transition: all, 0.4s;
+        }
+        &:active {
+          box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
+        }
       }
-    }
 
-    .card:hover {
-      background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
-      box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
-      margin: 0.01vh;
-      //efeto de transicion de sombra
-      transition: box-shadow 0.7s, margin 0.4s;
-    }
-    .card .btn:hover {
-      background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
-      box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
-      transition: box-shadow 0.17s;
-    }
-    .card .btn:active {
-      box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
-    }
-    .img-card:hover {
-      border: solid 0.4vh rgb(200, 0, 250);
-      box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0, 8);
-      border-radius: 25px;
+      //hover de la card
+      &:hover {
+        background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
+        box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
+        margin: 0.01vh;
+      }
     }
   }
 }

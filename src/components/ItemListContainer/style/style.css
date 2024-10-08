@@ -1,41 +1,41 @@
-@charset "UTF-8";
 .div-flex .contenedor-ul {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-}
-@media (max-width: 900px) {
-  .div-flex .contenedor-ul {
-    grid-template-columns: repeat(2, auto); /* 2 columnas de cards más chicas */
-  }
-}
-@media (max-width: 600px) {
-  .div-flex .contenedor-ul {
-    grid-template-columns: 1fr; /* 1 columna de card */
-  }
+  grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
 }
 .div-flex .contenedor-ul .card {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 10px;
-  padding: 0.6vh;
-  gap: 0.5vh;
+  margin: 1.5vh;
   max-width: 60vh;
   background-color: rgba(200, 0, 250, 0.4);
   border: solid 0.25vh rgb(200, 0, 250);
   box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.7s, margin 0.4s;
+}
+.div-flex .contenedor-ul .card ul {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  align-content: center;
 }
 .div-flex .contenedor-ul .card .img-card {
-  max-width: 90%;
+  max-width: 94%;
   border: solid 0.25vh rgba(200, 0, 250, 0.8);
-  transition: 0.7s;
+  transition: border 0.7s, box-shadow 0.7s;
 }
 .div-flex .contenedor-ul .card .img-card:hover {
   border: solid 0.4vh rgb(200, 0, 250);
-  box-shadow: 0px 0px 30px 5px rgb(250, 0, 200);
+  box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
   border-radius: 25px;
+  transition: all 0.5s;
+}
+.div-flex .contenedor-ul .card p {
+  text-align: left;
+  margin: 1% 4% 2% 4%;
+  width: auto;
+  height: 15vh;
+  overflow: auto;
 }
 .div-flex .contenedor-ul .card .btn {
   display: flex;
@@ -45,22 +45,21 @@
   background: linear-gradient(to top, black, rgb(50, 2, 112));
   cursor: pointer;
   height: 2.5vh;
-  width: 115%;
+  width: 140px;
   border-radius: 100px;
-  margin: 0%;
-  transition: 0.2s;
+  margin-bottom: 1vh;
+  transition: box-shadow, 0.7s;
+}
+.div-flex .contenedor-ul .card .btn:hover {
+  background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
+  box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
+  transition: all, 0.4s;
+}
+.div-flex .contenedor-ul .card .btn:active {
+  box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
 }
 .div-flex .contenedor-ul .card:hover {
   background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
   box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
   margin: 0.01vh;
-  transition: box-shadow 0.7s, margin 0.4s;
-}
-.div-flex .contenedor-ul .card .btn:hover {
-  background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
-  box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
-  transition: box-shadow 0.17s;
-}
-.div-flex .contenedor-ul .card .btn:active {
-  box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
 }/*# sourceMappingURL=style.css.map */

@@ -3,9 +3,8 @@ import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase";
 
 //comentamos con camelcase por que es un custom hook.
-export const UseRoms = () => {
+export const useRoms = () => {
   const [roms, setRoms] = useState([]);
-
   //llamo a la base de datos en un useEffect, para traer la coleccion de roms.
   useEffect(() => {
     // aca es donde se hace la llamada y le digo q de mi base de datos de firebase me traiga una coleccion de roms.
@@ -22,7 +21,7 @@ export const UseRoms = () => {
       })
       .catch((err) => console.log(err))
       .finally(/* aca creo un un if para que se ejecute el spin de loading.!! */);
-  }, [roms]);
+  }, []);
 
   return { roms };
 };

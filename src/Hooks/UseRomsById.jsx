@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import{doc,getDoc}  from "firebase/firestore";
 import { db } from "../firebase";
 
-export const UseRomsById = (id) => {
+export const useRomsById = (id) => {
   const [rom, setRom] = useState([]);
   console.log(rom);
   
