@@ -1,5 +1,6 @@
 import { Spin } from "../Spin";
 import "./style/style.css";
+import { Link } from "react-router-dom";
 
 export const ItemListContainer = ({ romsFiltrados }) => {
   return romsFiltrados?.length === 0 ? (
@@ -12,6 +13,7 @@ export const ItemListContainer = ({ romsFiltrados }) => {
             <div key={rom.id} className="card">
               <ul>
                 <li>
+                  <h5></h5>
                   <h3>{rom.titulo}</h3>
                 </li>
                 <li>
@@ -21,10 +23,11 @@ export const ItemListContainer = ({ romsFiltrados }) => {
                   <p>{rom.descripcion}</p>
                 </li>
                 <li>
-                  
-                  <button type="button" className="btn">
-                    ver mas
-                  </button>
+                  <Link to={`/rom/${rom.id} `}>
+                    <button type="button" className="btn">
+                      ver mas
+                    </button>
+                  </Link>
                 </li>
               </ul>
             </div>

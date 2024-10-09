@@ -13,9 +13,9 @@
   flex-wrap: wrap;
   margin: 5px 40px 5px 40px;
   align-content: center;
-  min-height: 85vh;
   background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
   border: solid 0.5vh rgb(200, 0, 250);
+  min-height: 87vh;
 }
 
 .nav-itemListContainer {
@@ -25,6 +25,7 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 0.5vh;
+  max-height: 40px;
 }
 .nav-itemListContainer h6 {
   margin-left: 1vh;

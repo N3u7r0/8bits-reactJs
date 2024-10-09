@@ -1,1 +1,71 @@
-/*# sourceMappingURL=index.css.map */
+.contenedor-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
+}
+.contenedor-ul .cardDetail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1.5vh;
+  max-width: 100vh;
+  background-color: rgba(200, 0, 250, 0.4);
+  border: solid 0.25vh rgb(200, 0, 250);
+  box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.7s, margin 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contenedor-ul .cardDetail ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.contenedor-ul .cardDetail .img-card {
+  max-width: 94%;
+  border: solid 0.25vh rgba(200, 0, 250, 0.8);
+  transition: border 0.7s, box-shadow 0.7s;
+}
+.contenedor-ul .cardDetail .img-card:hover {
+  border: solid 0.4vh rgb(200, 0, 250);
+  box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
+  border-radius: 25px;
+  transition: all 0.5s;
+}
+.contenedor-ul .cardDetail p {
+  text-align: left;
+  margin: 1% 4% 2% 4%;
+  width: auto;
+  height: 15vh;
+  overflow: auto;
+}
+.contenedor-ul .cardDetail .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 2px;
+  background: linear-gradient(to top, black, rgb(50, 2, 112));
+  cursor: pointer;
+  height: 2.5vh;
+  width: 140px;
+  border-radius: 100px;
+  margin-bottom: 1vh;
+  transition: box-shadow 0.7s;
+}
+.contenedor-ul .cardDetail .btn:hover {
+  background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
+  box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
+  transition: all 0.4s;
+}
+.contenedor-ul .cardDetail .btn:active {
+  box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
+  color: whitesmoke;
+  transition: 0.4s;
+}
+.contenedor-ul .cardDetail:hover {
+  background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
+  box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
+  margin: 0.01vh;
+}/*# sourceMappingURL=index.css.map */

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import{doc,getDoc}  from "firebase/firestore";
 import { db } from "../firebase";
+import { useParams } from "react-router";
 
-export const useRomsById = (id) => {
-  const [rom, setRom] = useState([]);
-  console.log(rom);
-  
+export const useRomsById = () => {
+   const {id} = useParams();
+  const [rom, setRom] = useState([]);  
 
   useEffect(() => {
     // aca es donde se hace la llamada y le digo q de mi base de datos de firebase me traiga una coleccion de roms.
@@ -18,8 +18,7 @@ export const useRomsById = (id) => {
         );
       })
       .catch((err) => console.log(err))
-      .finally(/* aca creo un un if para que se ejecute el spin de loading.!! */);
-  }, []);
+  }, [id]);
    
   return { rom };
 };

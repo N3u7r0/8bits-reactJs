@@ -1,3 +1,8 @@
+.div-flex {
+  margin: 0%;
+  overflow: auto;
+  max-height: 81vh;
+}
 .div-flex .contenedor-ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
@@ -48,15 +53,17 @@
   width: 140px;
   border-radius: 100px;
   margin-bottom: 1vh;
-  transition: box-shadow, 0.7s;
+  transition: box-shadow 0.7s;
 }
 .div-flex .contenedor-ul .card .btn:hover {
   background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
   box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
-  transition: all, 0.4s;
+  transition: all 0.4s;
 }
 .div-flex .contenedor-ul .card .btn:active {
   box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
+  color: whitesmoke;
+  transition: 0.4s;
 }
 .div-flex .contenedor-ul .card:hover {
   background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));

@@ -9,35 +9,33 @@ export const Roms = () => {
   const { roms } = useRoms();
   const [romsFiltrados, setRomsFiltrados] = useState([]);
   const { consola } = useParams("");
-console.log(consola);
 
   useEffect(() => {
     let filteredRoms = roms;
-    console.log(filteredRoms);
-    
+
     switch (consola) {
       case "nes":
         filteredRoms = roms.filter((rom) => rom.consola === "nes");
-        setRomsFiltrados(filteredRoms)
+        setRomsFiltrados(filteredRoms);
         break;
       case "sega":
         filteredRoms = roms.filter((rom) => rom.consola === "sega");
-        setRomsFiltrados(filteredRoms)
+        setRomsFiltrados(filteredRoms);
         break;
       case "neogeo":
         filteredRoms = roms.filter((rom) => rom.consola === "neogeo");
-        setRomsFiltrados(filteredRoms)
+        setRomsFiltrados(filteredRoms);
         break;
       case "psx":
         filteredRoms = roms.filter((rom) => rom.consola === "psx");
-        setRomsFiltrados(filteredRoms)
+        setRomsFiltrados(filteredRoms);
         break;
       default:
         filteredRoms = roms;
         break;
     }
     setRomsFiltrados(filteredRoms);
-  }, [ roms, consola ]);
+  }, [roms, consola]);
 
   return (
     <>

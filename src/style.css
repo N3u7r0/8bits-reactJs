@@ -10,7 +10,8 @@
     font-size: medium;
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
 
-    h1,h3{
+    h1,
+    h3 {
         /* configuracion del h1 */
         font-family: "Honk", system-ui;
         font-optical-sizing: auto;
@@ -20,6 +21,40 @@
         font-size: 3.2vh;
         margin: 0%
     }
-}
 
-;
+    /* estylos de escrollbar */
+
+    /* Estilizar la barra de desplazamiento */
+    &::-webkit-scrollbar {
+        width: 1.7vh;
+        /* Ajusta el ancho de la barra */
+
+    }
+
+    /* Estilizar el "thumb" de la barra de desplazamiento */
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(250, 0, 196, 0.7);
+        border: solid 2px rgb(250, 0, 196, 0.9);
+
+    }
+
+    /* Estilizar el "track" de la barra de desplazamiento */
+    &::-webkit-scrollbar-track {
+        background-color: rgba(200, 0, 250, 0.4);
+
+
+    }
+
+    /* Estilizar el "thumb" al pasar el cursor */
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(250, 162, 0, 0.9);
+        border: solid 2px rgb(158, 106, 1);
+
+
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background-color: rgb(250, 183, 0);
+        box-shadow: 0px 0px 30px 5px rgba(250, 162, 0, 0.5);
+    }
+}
