@@ -10,11 +10,20 @@ export const ItemDetailContainer = ({ rom }) => {
         <div key={rom.id} className="cardDetail">
           <ul>
             <li>
-              <h5></h5>
               <h3>{rom.titulo}</h3>
             </li>
             <li>
-              <img className="img-card" src={rom.foto} alt={rom.fotoAlt} />
+              <div className="tv">
+                <div className="tv-flex">
+                  <div className="tv-parlante-a"></div>
+
+                  <img className="img-card" src={rom.foto} alt={rom.fotoAlt} />
+                  <div className="tv-parlante-b"></div>
+                </div>
+                <div className="botonera">
+                 Ooooo
+                </div>
+              </div>
             </li>
             <li>
               <p>{rom.descripcion}</p>
