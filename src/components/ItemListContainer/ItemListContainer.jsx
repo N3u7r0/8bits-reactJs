@@ -7,17 +7,17 @@ export const ItemListContainer = ({ romsFiltrados }) => {
     <Spin />
   ) : (
     <>
-      <div className="div-flex">
+      <section className="div-flex">
         <div className="contenedor-ul">
           {romsFiltrados.map((rom) => (
-            <div key={rom.id} className="card">
+            <article key={rom.id} className="card">
               <ul>
                 <li>
                   <h5></h5>
                   <h3>{rom.titulo}</h3>
                 </li>
                 <li>
-                  <img className="img-card" src={rom.foto} alt={rom.fotoAlt} />
+                  <img className="img-card" src={rom.fotoPortada} alt={rom.fotoAlt} />
                 </li>
                 <li>
                   <p>{rom.descripcion}</p>
@@ -30,10 +30,10 @@ export const ItemListContainer = ({ romsFiltrados }) => {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </article>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -42,4 +42,23 @@ nav h1:hover {
   margin: 1px;
   font-size: 39px;
   transition: 1s;
+}
+nav .btn_1up {
+  border-bottom: 2px solid rgba(200, 0, 255, 0.9);
+  padding: 3px;
+  margin: 0.3vh 1vh 0.3vh 1vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 100%;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
+  color: rgba(158, 104, 5, 0.5);
+}
+nav .btn_1up:hover {
+  box-shadow: 0px 0px 10px 1px rgb(156, 102, 1);
+  background-color: rgba(158, 104, 5, 0.7);
+  transition: all 0.08s;
+}
+nav .btn_1up:active {
+  box-shadow: 0px 0px 7px 6px rgb(255, 166, 0);
+  background-color: rgba(255, 166, 0, 0.7);
+  color: rgb(158, 104, 5);
 }/*# sourceMappingURL=style.css.map */

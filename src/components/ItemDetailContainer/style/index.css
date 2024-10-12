@@ -1,90 +1,98 @@
-@charset "UTF-8";
-.contenedor-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
+.div-flex-detail {
+  overflow: auto;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.contenedor-ul .cardDetail {
+.div-flex-detail .cardDetail {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 1.5vh;
-  max-width: 100vh;
-  background-color: rgba(200, 0, 250, 0.4);
-  border: solid 0.25vh rgb(200, 0, 250);
-  box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
-  transition: box-shadow 0.7s, margin 0.4s;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: -moz-max-content;
+  width: max-content;
 }
-.contenedor-ul .cardDetail .tv {
+.div-flex-detail .cardDetail .tv {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
 }
-.contenedor-ul .cardDetail .tv:hover {
+.div-flex-detail .cardDetail .tv:hover {
   border-radius: 20px;
   transition: all 0.5s;
-  margin: 1% 15% 3% 15%;
+  margin: 1% 10% 3% 10%;
   border: 0.5vh solid rgba(200, 0, 250, 0.8);
-  box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
+  box-shadow: 0px 0px 10px 5px rgba(250, 0, 200, 0.8);
   background-color: black;
+  border-radius: 20px;
 }
-.contenedor-ul .cardDetail .tv .tv-flex {
+.div-flex-detail .cardDetail .tv .tv-flex {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
-.contenedor-ul .cardDetail .tv .tv-flex .img-card {
+.div-flex-detail .cardDetail .tv .tv-flex .img-card {
   max-width: 80%;
   border: solid 0.4vh rgba(200, 0, 250, 0.8);
   transition: border 0.7s, box-shadow 0.7s;
-  border: solid 0.4vh rgb(200, 0, 250);
-  transition: all 0.5s;
   position: relative;
-  z-index: 2; /* Asegurar que la imagen esté por encima */
+  z-index: 2;
 }
-.contenedor-ul .cardDetail .tv .tv-flex .img-card:hover {
+.div-flex-detail .cardDetail .tv .tv-flex .img-card:hover {
   border: solid 0.4vh rgba(200, 0, 250, 0.8);
   box-shadow: 0px 0px 30px 2px rgba(250, 0, 200, 0.8);
   border-radius: 25px;
   transition: all 0.2s;
-  margin: 1% 8% 4% 8%;
+  margin: 1% 8% 5% 8%;
 }
-.contenedor-ul .cardDetail .tv .tv-flex .tv-parlante-a {
-  height: 30vh;
+.div-flex-detail .cardDetail .tv .tv-flex .tv-parlante-a,
+.div-flex-detail .cardDetail .tv .tv-flex .tv-parlante-b {
+  height: 24vh;
   border-radius: 8px;
   position: relative;
-  left: 5%;
   border: 0.4vh solid rgba(200, 0, 250, 0.8);
   box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
-  z-index: 1; /* Asegurar que esté debajo de la imagen */
-}
-.contenedor-ul .cardDetail .tv .tv-flex .tv-parlante-b {
-  height: 30vh;
-  border-radius: 8px;
-  position: relative;
-  right: 5%;
-  border: 0.4vh solid rgba(200, 0, 250, 0.8);
-  box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
-  z-index: 1; /* Asegurar que esté debajo de la imagen */
-}
-.contenedor-ul .cardDetail .tv .botonera {
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-  margin-bottom: 1vh;
-  position: absolute;
-  left: 68%;
-  top: 83%;
   z-index: 1;
 }
-.contenedor-ul .cardDetail:hover {
+.div-flex-detail .cardDetail .tv .tv-flex .tv-parlante-a {
+  left: 5%;
+}
+.div-flex-detail .cardDetail .tv .tv-flex .tv-parlante-b {
+  right: 5%;
+}
+.div-flex-detail .cardDetail .tv .contenedor-botonera-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 0px;
+  margin-top: 2.5%;
+  position: relative;
+  top: -3vh;
+  z-index: 0;
+}
+.div-flex-detail .cardDetail .tv .contenedor-botonera-logo .tv-logo {
+  font-size: 1vh;
+  position: relative;
+  left: 10%;
+}
+.div-flex-detail .cardDetail .tv .contenedor-botonera-logo .botonera {
+  margin-top: 1vh;
+  position: relative;
+  left: 25%;
+}
+.div-flex-detail .cardDetail:hover {
   background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
   box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
-  margin: 0.01vh;
-  border-radius: 2%;
+  margin: 2vh;
+  border-radius: 10px;
+  border: 0.4vh solid rgba(200, 0, 250, 0.8);
+  transition: all 0.4s;
 }/*# sourceMappingURL=index.css.map */

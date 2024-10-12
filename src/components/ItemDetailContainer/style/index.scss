@@ -1,102 +1,113 @@
-.contenedor-ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
-  
-    .cardDetail {
+.div-flex-detail {
+  overflow: auto;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .cardDetail {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: max-content;
+
+    .tv {
       display: flex;
       flex-direction: column;
-      text-align: center;
-      margin: 1.5vh;
-      max-width: 100vh;
-      background-color: rgba(200, 0, 250, 0.4);
-      border: solid 0.25vh rgb(200, 0, 250);
-      box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
-      transition: box-shadow 0.7s, margin 0.4s;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  
-      .tv {
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+      &:hover {
+        border-radius: 20px;
+        transition: all 0.5s;
+        margin: 1% 10% 3% 10%;
+        border: 0.5vh solid rgba(200, 0, 250, 0.8);
+        box-shadow: 0px 0px 10px 5px rgba(250, 0, 200, 0.8);
+        background-color: black;
+        border-radius: 20px;
+      }
+
+      // este contiene los parlantes y la pantalla
+      .tv-flex {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-  
-        &:hover {
-          border-radius: 20px;
-          transition: all 0.5s;
-          margin: 1% 15% 3% 15%;
-          border: 0.5vh solid rgba(200, 0, 250, 0.8);
-          box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
-          background-color: black;
-        }
-  
-        .tv-flex {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-  
-          .img-card {
-            max-width: 80%;
+        position: relative;
+       
+
+        .img-card {
+          max-width: 80%;
+          border: solid 0.4vh rgba(200, 0, 250, 0.8);
+          transition: border 0.7s, box-shadow 0.7s;
+          position: relative;
+          z-index: 2; 
+
+          &:hover {
             border: solid 0.4vh rgba(200, 0, 250, 0.8);
-            transition: border 0.7s, box-shadow 0.7s;
-            border: solid 0.4vh rgb(200, 0, 250);
-            transition: all 0.5s;
-            position: relative;
-            z-index: 2; /* Asegurar que la imagen esté por encima */
-  
-            &:hover {
-              border: solid 0.4vh rgba(200, 0, 250, 0.8);
-              box-shadow: 0px 0px 30px 2px rgba(250, 0, 200, 0.8);
-              border-radius: 25px;
-              transition: all 0.2s;
-              margin: 1% 8% 4% 8%;
-            }
-          }
-  
-          .tv-parlante-a {
-            height: 30vh;
-            border-radius: 8px;
-            position: relative;
-            left: 5%;
-            border: 0.4vh solid rgba(200, 0, 250, 0.8);
-            box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
-            z-index: 1; /* Asegurar que esté debajo de la imagen */
-          }
-  
-          .tv-parlante-b {
-            height: 30vh;
-            border-radius: 8px;
-            position: relative;
-            right: 5%;
-            border: 0.4vh solid rgba(200, 0, 250, 0.8);
-            box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
-            z-index: 1; /* Asegurar que esté debajo de la imagen */
+            box-shadow: 0px 0px 30px 2px rgba(250, 0, 200, 0.8);
+            border-radius: 25px;
+            transition: all 0.2s;
+            margin: 1% 8% 5% 8%; // aca darle la altura resposiva de las letras , el 0%
           }
         }
-  
-        .botonera {
-          display: flex;
-          flex-direction: row;
-          align-items: left;
-          margin-bottom: 1vh;
-          position: absolute;
-          left: 68%;
-          top: 83%;
-          z-index :1;
-  
+
+        .tv-parlante-a,
+        .tv-parlante-b {
+          height: 24vh;
+          border-radius: 8px;
+          position: relative;
+          border: 0.4vh solid rgba(200, 0, 250, 0.8);
+          box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
+          z-index: 1;
+        }
+
+        .tv-parlante-a {
+          left: 5%;
+          
+        }
+
+        .tv-parlante-b {
+          right: 5%;
         }
       }
-  
-      //hover de la card
-      &:hover {
-        background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
-        box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
-        margin: 0.01vh;
-        border-radius: 2%;
+
+      .contenedor-botonera-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 0px;
+        margin-top: 2.5%;
+        position: relative;
+        top: -3vh; 
+        z-index: 0; 
+       
+
+        .tv-logo {
+          font-size: 1vh;
+          position: relative;
+          left: 10%;
+        }
+
+        .botonera {
+          margin-top: 1vh;
+          position: relative;
+          left: 25%;
+        }
       }
     }
+
+    &:hover {
+      background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
+      box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
+      margin: 2vh;
+      border-radius: 10px;
+      border: 0.4vh solid rgba(200, 0, 250, 0.8);
+      transition: all 0.4s;
+    }
   }
-  
+}
