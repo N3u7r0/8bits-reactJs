@@ -95,4 +95,52 @@
   border-radius: 10px;
   border: 0.4vh solid rgba(200, 0, 250, 0.8);
   transition: all 0.4s;
+}
+.div-flex-detail aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+  margin: 0% 5% 0% 5%;
+}
+.div-flex-detail aside .fotos-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3vh;
+  transition: all 1.3s;
+}
+.div-flex-detail aside .fotos-contenedor .fotosGameplay {
+  border: 2px solid rgba(200, 0, 250, 0.2);
+  width: 30%;
+}
+.div-flex-detail aside .fotos-contenedor .fotosGameplay:hover {
+  border: 2px solid rgba(200, 0, 250, 0.8);
+  box-shadow: 1px 2px 10px 7px rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 31%;
+  transition: 0.3s;
+}
+.div-flex-detail aside .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, black, rgb(50, 2, 112));
+  cursor: pointer;
+  height: 2.5vh;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 100px;
+  margin-bottom: 1vh;
+  transition: box-shadow 0.7s;
+}
+.div-flex-detail aside .btn:hover {
+  background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
+  box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
+  transition: all 0.4s;
+}
+.div-flex-detail aside .btn:active {
+  box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
+  color: whitesmoke;
+  transition: 0.4s;
 }/*# sourceMappingURL=index.css.map */

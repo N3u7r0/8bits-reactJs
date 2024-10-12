@@ -35,22 +35,21 @@ export const ItemDetailContainer = ({ rom }) => {
          
         </article>
         <aside>
-            <h5>reseña:</h5>
+            <h5>Reseña:</h5>
             <p>{rom.descripcion_detail}</p>
-            <h5>año de lanzamiento:</h5>
+            <h5>Año de lanzamiento:</h5>
             <p>{rom.lanzamiento}</p>
+            <h5>Empresa:</h5>
+            <p>{rom.empresa}</p>
             <h5>fotos:</h5>
-            <div>
-              <img src={rom.foto_1} alt="" />
-              <img src={rom.foto_2} alt="" />
-              <img src={rom.foto_3} alt="" />
+            <div  className="fotos-contenedor">
+              <img className="fotosGameplay" src={rom.foto_1} alt="" />
+              <img className="fotosGameplay" src={rom.foto_2} alt="" />
+              <img className="fotosGameplay" src={rom.foto_3} alt="" />
             </div>
 
             <h3> Descargar</h3>
-            <a href={rom.link}>!!!descargar {rom.titulo}!!!</a>
-            
-             
-            
+            <a   type="button" className="btn"  href={rom.link}> → {rom.titulo} ←</a>
           </aside>
 
       </section>
