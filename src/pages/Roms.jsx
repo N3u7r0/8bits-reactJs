@@ -39,10 +39,10 @@ export const Roms = () => {
 
   return (
     <>
-      <h2 className="tituloPrincipal">Roms</h2>
+      <h2 className="tituloPrincipal">ROMs</h2>
       <div className="container-global">
         <nav className="nav-itemListContainer">
-          <h6>roms:</h6>
+          <h6>ROMs:</h6>
           <ul>
             <li>
               <Link to="/roms">

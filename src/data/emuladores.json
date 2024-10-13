@@ -1,0 +1,66 @@
+[
+    {
+        "consola": "nes",
+        "titulo": "",
+        "descripcion":"Emulador de roms de Nintendo sistem.",
+        "platafoma": "Windows",
+        "foto":"",
+        "link": ""
+    },
+    {
+        "consola": "nes",
+        "titulo": "",
+        "descripcion":"Emulador para smartphones de roms de Nintendo sistem.",
+        "platafoma": "IOS",
+        "foto":"",
+        "link": ""
+    },
+    {
+        "consola": "sega",
+        "titulo": "",
+        "descripcion":"Emulador de roms de Sega Genesis.",
+        "platafoma": "Windows",
+        "foto":"",
+        "link": ""
+    },
+    {
+        "consola": "sega",
+        "titulo": "",
+        "descripcion":"Emulador para smartphones de roms de Sega Genesis.",
+        "platafoma": "IOS",
+        "foto":"",
+        "link": ""
+    },
+    {
+        "consola": "psx",
+        "titulo": "",
+        "descripcion":"Emulador para smartphones de roms de Sega Genesis.",
+        "platafoma": "Windows",
+        "foto":"",
+        "link": ""
+    },
+    {
+        "consola": "psx",
+        "titulo": "",
+        "descripcion":"Emulador para smartphones de roms de Sega Genesis.",
+        "platafoma": "IOS",
+        "foto":"",
+        "link": ""
+    },
+    {
+        "consola": "neogeo",
+        "titulo": "",
+        "descripcion":"Emulador para smartphones de roms de Neo Geo.",
+        "platafoma": "Windows",
+        "foto":"",
+        "link": ""
+    },
+    {
+        "consola": "neogeo",
+        "titulo": "",
+        "descripcion":"Emulador para smartphones de roms de Neo Geo.",
+        "platafoma": "IOS",
+        "foto":"",
+        "link": ""
+    }
+]

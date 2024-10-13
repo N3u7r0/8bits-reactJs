@@ -36,11 +36,11 @@ export const ItemDetailContainer = ({ rom }) => {
         </article>
         <aside>
             <h5>Reseña:</h5>
-            <p>{rom.descripcion_detail}</p>
+            <p className="p_fondo">{rom.descripcion_detail}</p>
             <h5>Año de lanzamiento:</h5>
-            <p>{rom.lanzamiento}</p>
+            <p className="p_fondo">{rom.lanzamiento}</p>
             <h5>Empresa:</h5>
-            <p>{rom.empresa}</p>
+            <p className="p_fondo">{rom.empresa}</p>
             <h5>fotos:</h5>
             <div  className="fotos-contenedor">
               <img className="fotosGameplay" src={rom.foto_1} alt="" />

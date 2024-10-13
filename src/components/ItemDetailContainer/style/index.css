@@ -103,6 +103,11 @@
   gap: 1vh;
   margin: 0% 5% 0% 5%;
 }
+.div-flex-detail aside .p_fondo {
+  padding: 1vh;
+  border: solid 0.4vh rgba(200, 0, 250, 0.384);
+  background-color: rgba(36, 32, 32, 0.762);
+}
 .div-flex-detail aside .fotos-contenedor {
   display: flex;
   flex-wrap: wrap;

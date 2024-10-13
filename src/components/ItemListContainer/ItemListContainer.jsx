@@ -13,7 +13,7 @@ export const ItemListContainer = ({ romsFiltrados }) => {
             <article key={rom.id} className="card">
               <ul>
                 <li>
-                  <h5></h5>
+                  
                   <h3>{rom.titulo}</h3>
                 </li>
                 <li>
