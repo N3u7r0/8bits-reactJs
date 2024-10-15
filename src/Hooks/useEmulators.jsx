@@ -9,9 +9,8 @@ export const useEmulators = () => {
   
  
   useEffect(() => {
-    // aca es donde se hace la llamada y le digo q de mi base de datos de firebase me traiga una coleccion de emuladores.
+    // aca es donde se hace la llamada y le digo a de mi base de datos de firebase q me traiga la coleccion de emuladores.
     const romsCollection = collection(db, "emuladores");
-
     
     getDocs(romsCollection)
       .then((snapshot) => {

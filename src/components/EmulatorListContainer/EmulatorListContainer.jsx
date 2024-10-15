@@ -21,16 +21,15 @@ export const EmulatorListContainer = ({ emuladoresFiltrados }) => {
                   <p>{emulador.descripcion}</p>
                 </li>
                 <li>
-                  <p>{emulador.consola}</p>
+                  <p>consola :{emulador.consola}</p>
                 </li>
                 <li>
-                  <p>{emulador.plataforma}</p>
+                  <p> plataforma:{emulador.plataforma}</p>
                 </li>
                 <li>
                  
-                    <button type="button" className="btn">
-                      ver mas
-                    </button>
+                
+                <a   type="button" className="btn"  href={emulador.link}>  link</a>
                  
                 </li>
               </ul>

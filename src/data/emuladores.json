@@ -17,19 +17,19 @@
     },
     {
         "consola": "sega",
-        "titulo": "",
+        "titulo": "gens",
         "descripcion":"Emulador de roms de Sega Genesis.",
         "platafoma": "Windows",
-        "foto":"",
-        "link": ""
+        "foto":"https://firebasestorage.googleapis.com/v0/b/bits-6ecf6.appspot.com/o/sega%2Femuladores%2Fgenslogo.gif?alt=media&token=15898579-2e2e-4425-a8b3-a7345cbfac4f",
+        "link": "http://gens.me/download/SH2src160.zip"
     },
     {
         "consola": "sega",
-        "titulo": "",
+        "titulo": "gens IOS",
         "descripcion":"Emulador para smartphones de roms de Sega Genesis.",
         "platafoma": "IOS",
-        "foto":"",
-        "link": ""
+        "foto":"https://firebasestorage.googleapis.com/v0/b/bits-6ecf6.appspot.com/o/sega%2Femuladores%2FgensIOSlogo.jpg?alt=media&token=086b1020-a1a8-4d80-a092-359a4279ed26",
+        "link": "https://play.google.com/store/apps/details?id=ca.halsafar.genesisdroid&hl=en-US&pli=1"
     },
     {
         "consola": "psx",

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { createRomsFirestore } from  "../../helper/index";
+import { UpdateRoms } from "../../helper/UpdateRoms";
 
 import "./styles/style.css";
 
@@ -30,7 +30,7 @@ export const NavBar = () => {
           </Link>
         </li>
         
-        <button onClick={() => createRomsFirestore()} type="button" className="btn_1up" >♥♡♡</button>
+        <button onClick={() => UpdateRoms()} type="button" className="btn_1up" >♥♡♡</button>
         
       </ul>
     </nav>
