@@ -1,6 +1,6 @@
 import { db } from "../firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
-import data from "../data/emuladores.json";
+import data from "../data/roms.json";
 
 // Función para ordenar las claves de un objeto alfabéticamente.( gentileza de copilot)
 // esta funcion la utilizo para ordenar las claves de la coleccion de roms
@@ -21,7 +21,7 @@ export async function UpdateRoms() {
     }
 
     // Referencia a la colección en Firestore
-    const romsCollection = collection(db, "emuladores");
+    const romsCollection = collection(db, "roms");
 
     // Obtener los documentos
     const romsSnapshot = await getDocs(romsCollection);

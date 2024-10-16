@@ -43,7 +43,7 @@ export const ItemDetailContainer = ({ rom }) => {
             <p className="p_fondo">{rom.empresa}</p>
             <h5>fotos:</h5>
             <div  className="fotos-contenedor">
-              <img className="fotosGameplay" src={rom.foto_1} alt="" />
+             {<img className="fotosGameplay" src={rom.foto_1} alt="" />||<Spin />}
               <img className="fotosGameplay" src={rom.foto_2} alt="" />
               <img className="fotosGameplay" src={rom.foto_3} alt="" />
             </div>

@@ -1,4 +1,5 @@
 import { Spin } from "../Spin";
+import "./style/style.css";
 
 export const EmulatorListContainer = ({ emuladoresFiltrados }) => {
   return emuladoresFiltrados?.length === 0 ? (
@@ -9,30 +10,30 @@ export const EmulatorListContainer = ({ emuladoresFiltrados }) => {
         <div className="contenedor-ul">
           {emuladoresFiltrados.map((emulador) => (
             <article key={emulador.id} className="card">
-              <ul>
-                <li>
-                  
-                  <h3>{emulador.titulo}</h3>
-                </li>
-                <li>
-                  <img className="img-card" src={emulador.fotoPortada} alt={emulador.titulo} />
-                </li>
-                <li>
-                  <p>{emulador.descripcion}</p>
-                </li>
-                <li>
-                  <p>consola :{emulador.consola}</p>
-                </li>
-                <li>
-                  <p> plataforma:{emulador.plataforma}</p>
-                </li>
-                <li>
-                 
-                
-                <a   type="button" className="btn"  href={emulador.link}>  link</a>
-                 
-                </li>
-              </ul>
+              <h3>{emulador.titulo}</h3>
+
+              <img
+                className="img-card"
+                src={emulador.foto}
+                alt={emulador.titulo}
+              />
+              <div className="texto-contenedor">
+                <p>
+                  <br />
+                  {emulador.descripcion}
+                  <br />
+                  <br />
+                  consola: {emulador.consola}
+                  <br />
+                  <br />
+                  plataforma: {emulador.platafoma}{" "}
+                </p>
+              </div>
+
+              <a type="button" className="btn" href={emulador.link}>
+                {" "}
+                link
+              </a>
             </article>
           ))}
         </div>
