@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useEmulators } from "../Hooks";
 import { EmulatorListContainer } from "../components";
-
+import { useEmulators } from "../Hooks";
+import "./styles/style.css";
 
 export const Emuladores = () => {
   const { emuladores } = useEmulators();
   const [emuladoresFiltrados, setEmuladoresFiltrados] = useState([]);
   const { consola } = useParams("");
+  console.log(consola);
+  
 
   useEffect(() => {
     let filteredEmulators = emuladores;
@@ -35,7 +37,7 @@ export const Emuladores = () => {
         break;
     }
     setEmuladoresFiltrados(filteredEmulators);
-  }, [emuladores]);
+  }, [emuladores,consola]);
 
   return (
     <>

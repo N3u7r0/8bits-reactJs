@@ -40,7 +40,9 @@ export const Roms = () => {
   return (
     <>
       <h2 className="tituloPrincipal">ROMs</h2>
-      <div className="container-global">
+
+      <div className="div-nav_container-global">
+        
         <nav className="nav-itemListContainer">
           <h6>ROMs:</h6>
           <ul>
@@ -71,7 +73,11 @@ export const Roms = () => {
             </li>
           </ul>
         </nav>
-        <ItemListContainer romsFiltrados={romsFiltrados} />
+
+        <div  className="container-global">
+          <ItemListContainer romsFiltrados={romsFiltrados} />
+        </div>
+
       </div>
     </>
   );

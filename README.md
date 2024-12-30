@@ -8,6 +8,8 @@ Copiar  <br>
  npm i sass <br>
  npm react-router<br>
  npm react-router-dom<br>
+ npm install sweetalert2<br>
+ npm install @sweetalert2/theme-dark<br>
 
 
 

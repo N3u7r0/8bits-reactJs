@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, Emuladores, Gameplays, Roms, Trucos,RomDetail } from "../pages";
+import { Home, Emuladores, Roms, Trucos,RomDetail } from "../pages";
 
 
 export const RouterMain = () => {
@@ -10,7 +10,6 @@ export const RouterMain = () => {
       <Route path="/" element={<Home />} />
      
       <Route path="/trucos" element={<Trucos />} />
-      <Route path="/gameplays" element={<Gameplays />} />
       <Route path="/emuladores" element={<Emuladores />} />
       <Route path="/emuladores/:consola" element={<Emuladores />} />
       <Route path="/roms" element={<Roms />} />

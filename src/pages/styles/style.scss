@@ -1,43 +1,48 @@
 .tituloPrincipal {
   text-align: center;
-
   margin: 17px 40px 5px 40px;
   align-content: center;
   padding: 0.5vh;
-  border: solid 0.5vh rgb(200, 0, 250);
+  border: solid 0.5vh var(--color-border);
   background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
 }
-.container-global {
+.div-nav_container-global {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  margin: 5px 40px 5px 40px;
-  align-content: center;
-  background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
-  border: solid 0.5vh rgb(200, 0, 250);
-  min-height: 87vh;
-}
+  justify-content: center;
+  margin: 0rem 2.5rem 1.5rem 2.5rem;
+  border: solid 0.5vh var(--color-border);
 
-// navBar roms!
-// cancelo los stilos que no quiero de la etiqueta <nav> del componente roms (los etilos de la etiqueta estan declarados en nabBar.jsx).
-.nav-itemListContainer {
-  position: static;
-  box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);
-  width: 100%;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 0.5vh;
-  max-height: 40px;
-  h6 {
-    margin-left: 1vh;
+  // navBar roms y emuladores!
+  .nav-itemListContainer {
+    position: static;
+     width:100%;
+    max-height: 40px;
+    padding-left: 1.2vh;
+    align-items: center;
+    justify-content: left;
+
+    // cancelo los stilos que no quiero de la etiqueta <nav> del componente roms (los etilos de la etiqueta estan declarados en nabBar.jsx).
+    box-shadow: none;
+    border: none;
+
+    h6 {
+      margin-left: 1vh;
+    }
+    ul {
+      margin: 0%;
+    }
   }
-  ul {
-    margin: 0%;
+
+  .container-global {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-content: center;
+    background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
+    border-top: solid 0.5vh var(--color-border);
+    min-height: 87vh;
+    overflow: auto;
   }
-
-
-
-  
 }
-
-

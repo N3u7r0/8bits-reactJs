@@ -1,72 +1,75 @@
 .div-flex {
-  margin: 0%;
-  overflow: auto;
   max-height: 81vh;
 }
 .div-flex .contenedor-ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2vh;
+  margin: 2vh 4vh 5vh 4vh;
 }
 .div-flex .contenedor-ul .card {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  margin: 1.5vh;
-  max-width: 60vh;
+  padding: 1vh;
+  /* margin: 1.5vh; */
+  height: auto;
   background-color: rgba(200, 0, 250, 0.4);
-  border: solid 0.25vh rgb(200, 0, 250);
+  border: solid 0.25vh var(--color-border);
   box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
   transition: box-shadow 0.7s, margin 0.4s;
+  overflow: hidden;
 }
 .div-flex .contenedor-ul .card ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
+  gap: 1vh;
 }
 .div-flex .contenedor-ul .card .img-card {
-  max-width: 94%;
-  border: solid 0.25vh rgba(200, 0, 250, 0.8);
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border: solid 0.25vh var(--color-border);
   transition: border 0.7s, box-shadow 0.7s;
 }
 .div-flex .contenedor-ul .card .img-card:hover {
-  border: solid 0.4vh rgb(200, 0, 250);
-  box-shadow: 0px 0px 30px 5px rgba(250, 0, 200, 0.8);
+  border: solid 0.4vh var(--color-border);
+  box-shadow: 0px 0px 20px 7px var(--color-shadow);
   border-radius: 25px;
   transition: all 0.5s;
 }
 .div-flex .contenedor-ul .card p {
-  text-align: left;
-  margin: 1% 4% 2% 4%;
-  width: auto;
-  height: 15vh;
-  overflow: auto;
+  width: 100%;
+  height: 5vw;
+  margin: auto;
+  background-color: rgba(188, 143, 143, 0.6);
+  overflow-x: auto;
 }
 .div-flex .contenedor-ul .card .btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1px 2px;
-  background: linear-gradient(to top, black, rgb(50, 2, 112));
   cursor: pointer;
-  height: 2.5vh;
-  width: 140px;
+  width: 8.5rem;
   border-radius: 100px;
-  margin-bottom: 1vh;
+  background: linear-gradient(to top, black, rgb(50, 2, 112));
   transition: box-shadow 0.7s;
 }
 .div-flex .contenedor-ul .card .btn:hover {
-  background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
-  box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
+  background: linear-gradient(to top, rgba(26, 25, 25, 0.9), rgba(136, 12, 174, 0.9));
+  box-shadow: 0px 0px 25px 10px var(--color-shadow);
   transition: all 0.4s;
 }
 .div-flex .contenedor-ul .card .btn:active {
-  box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
+  box-shadow: 0px 0px 50px 15px rgb(250, 0, 250);
   color: whitesmoke;
   transition: 0.4s;
 }
 .div-flex .contenedor-ul .card:hover {
-  background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
-  box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
-  margin: 0.01vh;
+  background: linear-gradient(to top, black, rgba(36, 32, 32, 0.462));
+  box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.764);
+  border: auto 1.7rem auto 1.7rem;
+  margin: auto 1.7rem auto 1.7rem;
 }/*# sourceMappingURL=style.css.map */

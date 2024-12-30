@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { UpdateRoms } from "../../helper/UpdateRoms";
+import { ImputRoms } from "../ImputRoms/ImputRoms";
 
 import "./styles/style.css";
 
@@ -22,17 +22,19 @@ export const NavBar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/trucos"><button type="button">Trucos</button></Link>
-        </li>
-        <li>
-          <Link to="/gameplays">
-            <button type="button">Gameplays</button>
+          <Link to="/trucos">
+            <button type="button">Trucos</button>
           </Link>
         </li>
-        
-        <button onClick={() => UpdateRoms()} type="button" className="btn_1up" >♥♡♡</button>
-        
+        {/* este btn va afuera de la ul para que no rompa el diseño de la navbar */}
+        <button onClick={() => ImputRoms()} type="button" className="btn_1up">
+          ♥♡♡
+        </button>
       </ul>
     </nav>
   );
 };
+
+
+
+
