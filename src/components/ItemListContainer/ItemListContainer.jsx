@@ -9,11 +9,11 @@ export const ItemListContainer = ({ romsFiltrados }) => {
     <>
       <section className="div-flex">
         <div className="contenedor-ul">
+
           {romsFiltrados.map((rom) => (
             <article key={rom.id} className="card">
               <ul>
                 <li>
-                  
                   <h3>{rom.titulo}</h3>
                 </li>
                 <li>

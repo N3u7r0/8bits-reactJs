@@ -1,10 +1,12 @@
 :root {
     /* variables de TODOS los colores */
-    --color-fuente: rgba(240, 152, 0, 0.8);
+    --color-fuente: rgba(236, 171, 59, 0.8);
     --color-footer: whitesmoke;
     --color-shadow: rgba(200, 0, 250, 0.6);
     --color-border: rgb(200, 0, 250);
     --color-border-tv: rgba(200, 0, 250, 0.8);
+    --color-background-card: rgba(20, 0, 41, 0.85);
+    --color-navbar:rgba(200, 0, 250, 0.95);
 }
 
 * {
@@ -21,18 +23,17 @@
 
     h1,
     h3 {
-        /* configuracion del h1 */
+        /* configuracion base del h1 y h3 */
         font-family: "Honk", system-ui;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
         font-variation-settings: "MORF" 15, "SHLN" 40.5;
-        font-size: 3.2vh;
+        font-size:xx-large;
         margin: 0%
     }
-
+   
     /* estylos de escrollbar */
-
     &::-webkit-scrollbar {
         width: 1.7vh;
         /* Ajusta el ancho de la barra */

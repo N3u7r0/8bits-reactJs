@@ -33,10 +33,15 @@
 .div-nav_container-global .container-global {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-content: center;
   background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
   border-top: solid 0.5vh var(--color-border);
-  min-height: 87vh;
   overflow: auto;
+  height: 85vh;
+}
+@media screen and (max-width: 550px) {
+  .div-nav_container-global .container-global {
+    /* esto es para q se centre en el medio a partir de esas resolucion */
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=style.css.map */

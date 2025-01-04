@@ -10,26 +10,33 @@ export const Emuladores = () => {
   const [emuladoresFiltrados, setEmuladoresFiltrados] = useState([]);
   const { consola } = useParams("");
   console.log(consola);
-  
 
   useEffect(() => {
     let filteredEmulators = emuladores;
 
     switch (consola) {
       case "nes":
-        filteredEmulators = emuladores.filter((emulador) => emulador.consola === "nes");
+        filteredEmulators = emuladores.filter(
+          (emulador) => emulador.consola === "nes"
+        );
         setEmuladoresFiltrados(filteredEmulators);
         break;
       case "sega":
-        filteredEmulators = emuladores.filter((emulador) => emulador.consola === "sega");
+        filteredEmulators = emuladores.filter(
+          (emulador) => emulador.consola === "sega"
+        );
         setEmuladoresFiltrados(filteredEmulators);
         break;
       case "neogeo":
-        filteredEmulators = emuladores.filter((emulador) => emulador.consola === "neogeo");
+        filteredEmulators = emuladores.filter(
+          (emulador) => emulador.consola === "neogeo"
+        );
         setEmuladoresFiltrados(filteredEmulators);
         break;
       case "psx":
-        filteredEmulators = emuladores.filter((emulador) => emulador.consola === "psx");
+        filteredEmulators = emuladores.filter(
+          (emulador) => emulador.consola === "psx"
+        );
         setEmuladoresFiltrados(filteredEmulators);
         break;
       default:
@@ -37,14 +44,16 @@ export const Emuladores = () => {
         break;
     }
     setEmuladoresFiltrados(filteredEmulators);
-  }, [emuladores,consola]);
+  }, [emuladores, consola]);
 
   return (
     <>
       <h2 className="tituloPrincipal">Emuladores</h2>
-      <div className="container-global">
+
+      <div className="div-nav_container-global">
+
         <nav className="nav-itemListContainer">
-          <h6>Emuladores:</h6>
+          <p>Emuladores:</p>
           <ul>
             <li>
               <Link to="/emuladores">
@@ -73,7 +82,10 @@ export const Emuladores = () => {
             </li>
           </ul>
         </nav>
-        <EmulatorListContainer emuladoresFiltrados={emuladoresFiltrados} /> 
+
+        <div className="container-global">
+          <EmulatorListContainer emuladoresFiltrados={emuladoresFiltrados} />
+        </div>
       </div>
     </>
   );

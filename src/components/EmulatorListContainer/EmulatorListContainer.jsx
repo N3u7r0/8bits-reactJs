@@ -8,32 +8,31 @@ export const EmulatorListContainer = ({ emuladoresFiltrados }) => {
     <>
       <section className="div-flex">
         <div className="contenedor-ul">
+          
           {emuladoresFiltrados.map((emulador) => (
             <article key={emulador.id} className="card">
-              <h3>{emulador.titulo}</h3>
-
-              <img
-                className="img-card"
-                src={emulador.foto}
-                alt={emulador.titulo}
-              />
-              <div className="texto-contenedor">
-                <p>
-                  <br />
-                  {emulador.descripcion}
-                  <br />
-                  <br />
-                  consola: {emulador.consola}
-                  <br />
-                  <br />
-                  plataforma: {emulador.platafoma}{" "}
-                </p>
-              </div>
-
-              <a type="button" className="btn" href={emulador.link}>
-                {" "}
-                link
-              </a>
+              <ul>
+                <li>
+                  <h3>{emulador.titulo}</h3>
+                </li>
+                <li>
+                  <img
+                    className="img-card-emuladores" src={emulador.foto} alt={emulador.titulo}/>
+                </li>
+                <li className="contenedor-texto-emuladores">
+                  <p>{emulador.descripcion}</p>
+                    
+                 <p> consola: {emulador.consola}</p>
+                
+                  <p>plataforma: {emulador.platafoma}</p>
+                </li>
+               
+                <li>
+                  <a type="button" className="btn" href={emulador.link}>
+                    link
+                  </a>
+                </li>
+              </ul>
             </article>
           ))}
         </div>

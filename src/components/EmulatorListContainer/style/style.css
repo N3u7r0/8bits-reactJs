@@ -1,7 +1,34 @@
-.card {
+.contenedor-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  margin: 2vh 2vw 2vh 2vw;
+}
+.contenedor-ul .card {
+  display: flex;
+}
+.contenedor-ul .card .img-card-emuladores {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 10%;
+}
+.contenedor-ul .card:hover ul {
+  justify-items: center;
   align-items: center;
 }
-.card .img-card {
-  height: 40vh;
-  width: 50vh;
+.contenedor-ul .card:hover ul .contenedor-texto-emuladores {
+  width: 100%;
+  padding: 0.2rem;
+  text-align: left;
+  background-color: none;
+  border: solid 3px var(--color-border);
+}
+.contenedor-ul .card:hover ul .contenedor-texto-emuladores p:first-of-type {
+  height: 6vh;
+}
+.contenedor-ul .card:hover ul .contenedor-texto-emuladores p {
+  border: solid 1px var(--color-border);
+  padding: 0.5rem;
+  height: -moz-max-content;
+  height: max-content;
 }/*# sourceMappingURL=style.css.map */

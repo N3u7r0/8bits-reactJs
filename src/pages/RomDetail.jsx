@@ -8,7 +8,7 @@ export const RomDetail = () => {
 
   return (
     <>
-      <h2 className="tituloPrincipal">Trucos</h2>
+    br
       <div className="container-global">
         <ItemDetailContainer rom={rom} />
       </div>

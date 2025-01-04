@@ -1,8 +1,39 @@
-.card {
-  align-items: center;
+.contenedor-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  margin: 2vh 2vw 2vh 2vw;
 
-  .img-card {
-    height: 40vh;
-    width: 50vh;
+  .card {
+    display: flex;
+
+    .img-card-emuladores {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 10%;
+    }
+
+    &:hover {
+      ul {
+        justify-items: center;
+        align-items: center;
+        .contenedor-texto-emuladores {
+          width: 100%;
+          padding: 0.2rem;
+          text-align: left;
+          background-color: none;
+          border: solid 3px var(--color-border);
+          
+          p:first-of-type {
+            height: 6vh;
+          }
+          p {
+            border: solid 1px var(--color-border);
+            padding: 0.5rem;
+            height: max-content;
+          }
+        }
+      }
+    }
   }
 }

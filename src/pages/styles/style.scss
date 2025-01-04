@@ -16,7 +16,7 @@
   // navBar roms y emuladores!
   .nav-itemListContainer {
     position: static;
-     width:100%;
+    width: 100%;
     max-height: 40px;
     padding-left: 1.2vh;
     align-items: center;
@@ -37,12 +37,15 @@
   .container-global {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-
     align-content: center;
     background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
     border-top: solid 0.5vh var(--color-border);
-    min-height: 87vh;
     overflow: auto;
+    height: 85vh;
+
+    @media screen and (max-width: 550px) {
+      /* esto es para q se centre en el medio a partir de esas resolucion */
+      flex-wrap: wrap;
+    }
   }
 }
