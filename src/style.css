@@ -5,7 +5,9 @@
     --color-shadow: rgba(200, 0, 250, 0.6);
     --color-border: rgb(200, 0, 250);
     --color-border-tv: rgba(200, 0, 250, 0.8);
-    --color-background-card: rgba(20, 0, 41, 0.85);
+
+    --color-card-background:rgba(200, 100, 200, 0.1);
+    --color-card-gradiante-mid: rgba(200, 0, 255,0.3);
     --color-navbar:rgba(200, 0, 250, 0.95);
 }
 

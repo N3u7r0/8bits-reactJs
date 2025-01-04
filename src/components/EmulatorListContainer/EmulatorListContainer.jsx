@@ -9,7 +9,7 @@ export const EmulatorListContainer = ({ emuladoresFiltrados }) => {
       <section className="contenedor-cards">
         
           {emuladoresFiltrados.map((emulador) => (
-            <article key={emulador.id} className="card">
+            <article key={emulador.id} className="card card-emuladores" >
               <ul>
                 <li>
                   <h3>{emulador.titulo}</h3>

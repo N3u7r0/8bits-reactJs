@@ -1,26 +1,26 @@
-.card {
-  display: flex;
+.card-emuladores {
+  border: 200vh;
 }
-.card .img-card-emuladores {
+.card-emuladores .img-card-emuladores {
   width: 15rem;
   height: 15rem;
   border-radius: 10%;
 }
-.card:hover ul {
+.card-emuladores:hover ul {
   justify-items: center;
   align-items: center;
 }
-.card:hover ul .contenedor-texto-emuladores {
+.card-emuladores:hover ul .contenedor-texto-emuladores {
   width: 100%;
   padding: 0.2rem;
   text-align: left;
   background-color: none;
   border: solid 3px var(--color-border);
 }
-.card:hover ul .contenedor-texto-emuladores p:first-of-type {
+.card-emuladores:hover ul .contenedor-texto-emuladores p:first-of-type {
   height: 6vh;
 }
-.card:hover ul .contenedor-texto-emuladores p {
+.card-emuladores:hover ul .contenedor-texto-emuladores p {
   border: solid 1px var(--color-border);
   padding: 0.5rem;
   height: -moz-max-content;

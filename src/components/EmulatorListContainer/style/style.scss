@@ -1,34 +1,31 @@
 
-  .card {
-    display: flex;
-
-    .img-card-emuladores {
-      width: 15rem;
-      height: 15rem;
-      border-radius: 10%;
-    }
-
-    &:hover {
-      ul {
-        justify-items: center;
-        align-items: center;
-        .contenedor-texto-emuladores {
-          width: 100%;
-          padding: 0.2rem;
-          text-align: left;
-          background-color: none;
-          border: solid 3px var(--color-border);
-          
-          p:first-of-type {
-            height: 6vh;
-          }
-          p {
-            border: solid 1px var(--color-border);
-            padding: 0.5rem;
-            height: max-content;
-          }
+  .img-card-emuladores {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 10%;
+  }
+  
+  &:hover {
+    ul {
+      justify-items: center;
+      align-items: center;
+      .contenedor-texto-emuladores {
+        width: 100%;
+        padding: 0.2rem;
+        text-align: left;
+        background-color: none;
+        border: solid 3px var(--color-border);
+  
+        p:first-of-type {
+          height: 6vh;
+        }
+        p {
+          border: solid 1px var(--color-border);
+          padding: 0.5rem;
+          height: max-content;
         }
       }
     }
   }
+
 
