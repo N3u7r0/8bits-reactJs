@@ -6,9 +6,8 @@ export const EmulatorListContainer = ({ emuladoresFiltrados }) => {
     <Spin />
   ) : (
     <>
-      <section className="div-flex">
-        <div className="contenedor-ul">
-          
+      <section className="contenedor-cards">
+        
           {emuladoresFiltrados.map((emulador) => (
             <article key={emulador.id} className="card">
               <ul>
@@ -35,7 +34,7 @@ export const EmulatorListContainer = ({ emuladoresFiltrados }) => {
               </ul>
             </article>
           ))}
-        </div>
+       
       </section>
     </>
   );

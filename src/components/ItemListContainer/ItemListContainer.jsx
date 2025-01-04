@@ -7,8 +7,7 @@ export const ItemListContainer = ({ romsFiltrados }) => {
     <Spin />
   ) : (
     <>
-      <section className="div-flex">
-        <div className="contenedor-ul">
+      <section className="contenedor-cards">
 
           {romsFiltrados.map((rom) => (
             <article key={rom.id} className="card">
@@ -32,7 +31,7 @@ export const ItemListContainer = ({ romsFiltrados }) => {
               </ul>
             </article>
           ))}
-        </div>
+       
       </section>
     </>
   );
