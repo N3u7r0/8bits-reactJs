@@ -10,21 +10,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
- /*  margin: 0rem 2.5rem 1.5rem 2.5rem; */
   border: solid 0.5vh var(--color-border);
 
   // navBar roms y emuladores!
   .nav-itemListContainer {
     position: static;
     width: 100%;
-    max-height: 40px;
     padding-left: 1.2vh;
     align-items: center;
     justify-content: left;
-
     // cancelo los stilos que no quiero de la etiqueta <nav> del componente roms (los etilos de la etiqueta estan declarados en nabBar.jsx).
     box-shadow: none;
-    border: none;
+     border-bottom: none; 
 
     h6 {
       margin-left: 1vh;
@@ -38,14 +35,10 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
+    background: linear-gradient(to right, black 0%, rgba(50, 0, 100, 0.72)50%,transparent 100%);
     border-top: solid 0.5vh var(--color-border);
-    overflow: auto;
+    overflow-y: auto;
     height: 85vh;
-
-    @media screen and (max-width: 550px) {
-      /* esto es para q se centre en el medio a partir de esas resolucion */
-      flex-wrap: wrap;
-    }
+    
   }
 }
