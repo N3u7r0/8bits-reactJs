@@ -73,9 +73,9 @@ export const Roms = () => {
           </ul>
         </nav>
 
-        <div className="container-global">
+        <section className="container-global">
           <ItemListContainer romsFiltrados={romsFiltrados} />
-        </div>
+        </section>
       </div>
     </>
   );

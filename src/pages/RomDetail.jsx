@@ -8,10 +8,9 @@ export const RomDetail = () => {
 
   return (
     <>
-    br
-      <div className="container-global">
+      <section className="div-flex-detail">
         <ItemDetailContainer rom={rom} />
-      </div>
+      </section>
     </>
   );
 };

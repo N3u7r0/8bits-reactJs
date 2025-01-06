@@ -32,8 +32,20 @@
   display: flex;
   flex-direction: column;
   align-content: center;
-  background: linear-gradient(to right, black 0%, rgba(50, 0, 100, 0.72) 50%, transparent 100%);
+  background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
   border-top: solid 0.5vh var(--color-border);
   overflow-y: auto;
   height: 85vh;
+}
+
+/* esto es del detalle del rom */
+.div-flex-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 92vh;
+  border: solid 0.5vh var(--color-border);
+  background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
+  overflow: auto;
 }/*# sourceMappingURL=style.css.map */

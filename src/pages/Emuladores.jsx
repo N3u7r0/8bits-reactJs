@@ -83,9 +83,9 @@ export const Emuladores = () => {
           </ul>
         </nav>
 
-        <div className="container-global">
+        <section className="container-global">
           <EmulatorListContainer emuladoresFiltrados={emuladoresFiltrados} />
-        </div>
+        </section>
       </div>
     </>
   );

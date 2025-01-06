@@ -1,173 +1,162 @@
-.div-flex-detail {
-  overflow: auto;
-  max-height: 85vh;
+.cardDetail {
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
+  width: max-content;
 
-  .cardDetail {
+  .tv {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    width: max-content;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
 
-    .tv {
+    &:hover {
+      border-radius: 20px;
+      transition: all 0.5s;
+      margin: 1% 10% 3% 10%;
+      border: 0.5vh solid var(--color-border-tv);
+      box-shadow: 0px 0px 10px 5px var(--color-shadow);
+      background-color: black;
+      border-radius: 20px;
+    }
+
+    // este contiene los parlantes y la pantalla
+    .tv-flex {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      transition: all 0.3s;
-      
-      &:hover {
-        border-radius: 20px;
-        transition: all 0.5s;
-        margin: 1% 10% 3% 10%;
-        border: 0.5vh solid var(--color-border-tv);
-        box-shadow: 0px 0px 10px 5px var(--color-shadow);
-        background-color: black;
-        border-radius: 20px;
-      }
+      position: relative;
 
-      // este contiene los parlantes y la pantalla
-      .tv-flex {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+      .img-card {
+        max-width: 80%;
+        border: solid 0.4vh var(--color-border-tv);
+        transition: border 0.7s, box-shadow 0.7s;
         position: relative;
+        z-index: 2;
 
-        .img-card {
-          max-width: 80%;
+        &:hover {
           border: solid 0.4vh var(--color-border-tv);
-          transition: border 0.7s, box-shadow 0.7s;
-          position: relative;
-          z-index: 2;
-
-          &:hover {
-            border: solid 0.4vh var(--color-border-tv);
-            box-shadow: 0px 0px 30px 2px var(--color-shadow);
-            border-radius: 25px;
-            transition: all 0.2s;
-            margin: 1% 8% 5% 8%; // aca darle la altura resposiva de las letras , el 0%
-          }
-        }
-
-        .tv-parlante-a,
-        .tv-parlante-b {
-          height: 24vh;
-          border-radius: 8px;
-          position: relative;
-          border: 0.4vh solid var(--color-border-tv);
-          box-shadow: 0px 0px 30px 5px rgba(200, 0, 250, 0.6);
-          z-index: 1;
-        }
-
-        .tv-parlante-a {
-          left: 5%;
-        }
-
-        .tv-parlante-b {
-          right: 5%;
+          box-shadow: 0px 0px 30px 2px var(--color-shadow);
+          border-radius: 25px;
+          transition: all 0.2s;
+          margin: 1% 8% 5% 8%; // aca darle la altura resposiva de las letras , el 0%
         }
       }
 
-      .contenedor-botonera-logo {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        width: 100%;
-        height: 0px;
-        margin-top: 2.5%;
+      .tv-parlante-a,
+      .tv-parlante-b {
+        height: 24vh;
+        border-radius: 8px;
         position: relative;
-        top: -3vh;
-        z-index: 0;
+        border: 0.4vh solid var(--color-border-tv);
+        box-shadow: 0px 0px 30px 5px rgba(200, 0, 250, 0.6);
+        z-index: 1;
+      }
 
-        .tv-logo {
-          font-size: 1vh;
-          position: relative;
-          left: 10%;
-        }
+      .tv-parlante-a {
+        left: 5%;
+      }
 
-        .botonera {
-          margin-top: 1vh;
-          position: relative;
-          left: 25%;
-        }
+      .tv-parlante-b {
+        right: 5%;
       }
     }
 
-    &:hover {
-      background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
-      box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
-      margin: 2vh;
-      border-radius: 10px;
-      border: 0.4vh solid rgba(200, 0, 250, 0.6);
-      transition: all 0.4s;
+    .contenedor-botonera-logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      width: 100%;
+      height: 0px;
+      margin-top: 2.5%;
+      position: relative;
+      top: -3vh;
+      z-index: 0;
+
+      .tv-logo {
+        font-size: 1vh;
+        position: relative;
+        left: 10%;
+      }
+
+      .botonera {
+        margin-top: 1vh;
+        position: relative;
+        left: 25%;
+      }
     }
   }
 
-  aside {
+  &:hover {
+    background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
+    margin: 2vh;
+    border-radius: 10px;
+    border: 0.4vh solid rgba(200, 0, 250, 0.6);
+    transition: all 0.4s;
+  }
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+  margin: 0% 5% 0% 5%;
+
+  .p_fondo {
+    padding: 1vh;
+    border: solid 0.4vh rgba(200, 0, 250, 0.384);
+    background-color: rgba(36, 32, 32, 0.762);
+  }
+
+  .fotos-contenedor {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1vh;
-    margin: 0% 5% 0% 5%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3vh;
 
-    .p_fondo{
-      padding: 1vh;
-      border: solid 0.4vh rgba(200, 0, 250, 0.384);
-      background-color: rgba(36, 32, 32, 0.762);}
+    transition: all 1.3s;
 
-    .fotos-contenedor{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-      gap: 3vh;
-      
-      transition:all 1.3s;
-    
-
-      .fotosGameplay{
-        border: 2px solid rgba(200, 0, 250, 0.2);
-        width: 30%;
-        &:hover{
-          
-          border: 2px solid var(--color-border-tv);
-          box-shadow: 1px 2px 10px 7px rgba(0, 0, 0, );
-          border-radius: 10px;
-          width: 31%;
-          transition: 0.3s;
-        }
+    .fotosGameplay {
+      border: 2px solid rgba(200, 0, 250, 0.2);
+      width: 30%;
+      &:hover {
+        border: 2px solid var(--color-border-tv);
+        box-shadow: 1px 2px 10px 7px rgba(0, 0, 0);
+        border-radius: 10px;
+        width: 31%;
+        transition: 0.3s;
       }
     }
+  }
 
-    .btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to top, black, rgb(50, 2, 112));
-      cursor: pointer;
-      height: 2.5vh;
-      width: max-content;
-      border-radius: 100px;
-      margin-bottom: 1vh;
-      transition: box-shadow 0.7s;
-     
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, black, rgb(50, 2, 112));
+    cursor: pointer;
+    height: 2.5vh;
+    width: max-content;
+    border-radius: 100px;
+    margin-bottom: 1vh;
+    transition: box-shadow 0.7s;
 
-      &:hover {
-        background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
-        box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
-        transition: all 0.4s;
-      }
+    &:hover {
+      background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
+      box-shadow: 0px 0px 70px 15px rgba(200, 0, 250, 0.7);
+      transition: all 0.4s;
+    }
 
-      &:active {
-        box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
-        color: whitesmoke;
-        transition: 0.4s;
-      }
+    &:active {
+      box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
+      color: whitesmoke;
+      transition: 0.4s;
     }
   }
 }
