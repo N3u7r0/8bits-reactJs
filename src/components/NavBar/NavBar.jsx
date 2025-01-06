@@ -12,6 +12,11 @@ export const NavBar = () => {
 
       <ul>
         <li>
+          <Link to="/">
+            <button type="button">Home</button>
+          </Link>
+        </li>
+        <li>
           <Link to="/roms">
             <button type="button">ROMs</button>
           </Link>
@@ -34,7 +39,3 @@ export const NavBar = () => {
     </nav>
   );
 };
-
-
-
-

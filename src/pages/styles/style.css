@@ -7,13 +7,14 @@
   background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
 }
 
-.div-nav_container-global {
+/* contenedor cards de roms y emuladores */
+.div-nav_container-cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
   border: solid 0.5vh var(--color-border);
 }
-.div-nav_container-global .nav-itemListContainer {
+.div-nav_container-cards .nav-itemListContainer {
   position: static;
   width: 100%;
   padding-left: 1.2vh;
@@ -22,13 +23,13 @@
   box-shadow: none;
   border-bottom: none;
 }
-.div-nav_container-global .nav-itemListContainer h6 {
+.div-nav_container-cards .nav-itemListContainer h6 {
   margin-left: 1vh;
 }
-.div-nav_container-global .nav-itemListContainer ul {
+.div-nav_container-cards .nav-itemListContainer ul {
   margin: 0%;
 }
-.div-nav_container-global .container-global {
+.div-nav_container-cards .container-cards {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -38,14 +39,14 @@
   height: 85vh;
 }
 
-/* esto es del detalle del rom */
-.div-flex-detail {
+/* contenedor de home, rom detail y trucos */
+.div-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 92vh;
-  border: solid 0.5vh var(--color-border);
+  height: 88vh;
+  border: solid 3px var(--color-border);
   background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
   overflow: auto;
 }/*# sourceMappingURL=style.css.map */

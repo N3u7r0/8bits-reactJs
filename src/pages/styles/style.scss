@@ -6,7 +6,9 @@
   border: solid 0.5vh var(--color-border);
   background: linear-gradient(to right, black, rgba(200, 0, 250, 0.3));
 }
-.div-nav_container-global {
+
+/* contenedor cards de roms y emuladores */
+.div-nav_container-cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +33,7 @@
     }
   }
 
-  .container-global {
+  .container-cards {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -43,14 +45,14 @@
   }
 }
 
-/* esto es del detalle del rom */
-.div-flex-detail {
+/* contenedor de home, rom detail y trucos */
+.div-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 92vh;
-  border: solid 0.5vh var(--color-border);
+  height: 88vh;
+  border: solid 3px var(--color-border);
   background: linear-gradient(to right, black 0%,var(--color-background-section)50%,transparent 100%);
   overflow: auto;
 }

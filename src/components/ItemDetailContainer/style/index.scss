@@ -1,93 +1,23 @@
-.cardDetail {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: max-content;
+.cardTv {
+  margin-top: 1vh;
 
-  .tv {
+  .tv-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
 
-    &:hover {
-      border-radius: 20px;
-      transition: all 0.5s;
-      margin: 1% 10% 3% 10%;
-      border: 0.5vh solid var(--color-border-tv);
-      box-shadow: 0px 0px 10px 5px var(--color-shadow);
-      background-color: black;
-      border-radius: 20px;
+    .img-card {
+      max-width: 80%;
+      border: solid 0.4vh var(--color-border-tv);
+      transition: border 0.7s, box-shadow 0.7s;
+    
+      z-index: 2;
+      transition: 0.2s;
     }
-
-    // este contiene los parlantes y la pantalla
-    .tv-flex {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-
-      .img-card {
-        max-width: 80%;
-        border: solid 0.4vh var(--color-border-tv);
-        transition: border 0.7s, box-shadow 0.7s;
-        position: relative;
-        z-index: 2;
-
-        &:hover {
-          border: solid 0.4vh var(--color-border-tv);
-          box-shadow: 0px 0px 30px 2px var(--color-shadow);
-          border-radius: 25px;
-          transition: all 0.2s;
-          margin: 1% 8% 5% 8%; // aca darle la altura resposiva de las letras , el 0%
-        }
-      }
-
-      .tv-parlante-a,
-      .tv-parlante-b {
-        height: 24vh;
-        border-radius: 8px;
-        position: relative;
-        border: 0.4vh solid var(--color-border-tv);
-        box-shadow: 0px 0px 30px 5px rgba(200, 0, 250, 0.6);
-        z-index: 1;
-      }
-
-      .tv-parlante-a {
-        left: 5%;
-      }
-
-      .tv-parlante-b {
-        right: 5%;
-      }
-    }
-
     .contenedor-botonera-logo {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: nowrap;
-      width: 100%;
-      height: 0px;
-      margin-top: 2.5%;
-      position: relative;
-      top: -3vh;
-      z-index: 0;
-
-      .tv-logo {
-        font-size: 1vh;
-        position: relative;
-        left: 10%;
-      }
-
-      .botonera {
-        margin-top: 1vh;
-        position: relative;
-        left: 25%;
-      }
+      display: none;
     }
   }
 
@@ -98,10 +28,79 @@
     border-radius: 10px;
     border: 0.4vh solid rgba(200, 0, 250, 0.6);
     transition: all 0.4s;
+    .tv-flex {
+      border-radius: 20px;
+      transition: all 0.5s;
+      margin: 1% 10% 3% 10%;
+      border: 0.5vh solid var(--color-border-tv);
+      box-shadow: 0px 0px 10px 5px var(--color-shadow);
+      background-color: black;
+      border-radius: 20px;
+      // este contiene los parlantes y la pantalla
+      .tv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+       
+        
+
+        .tv-parlante-a,
+        .tv-parlante-b {
+          height: 13vmax;
+          border-radius: 8px;
+          position: relative;
+          border: 0.2vmax solid var(--color-border-tv);
+          box-shadow: 0px 0px 30px 5px rgba(200, 0, 250, 0.6);
+          z-index: 1;
+        }
+
+        .tv-parlante-a {
+          left: 5%;
+        }
+
+        .tv-parlante-b {
+          right: 5%;
+        }
+      }
+
+      .contenedor-botonera-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        z-index: 0;
+
+        .tv-logo {
+          font-size: x-small;
+          position: relative;
+          
+          transform: translate(50%, -0.5vmax);
+        }
+
+        .botonera {
+          font-size: xx-small;
+          position: relative;
+          transform: translate(7.5vmax,-0.2vmax);
+        }
+      }
+
+      .img-card {
+        border: solid 0.4vh var(--color-border-tv);
+        box-shadow: 0px 0px 30px 2px var(--color-shadow);
+        border-radius: 25px;
+        transition: all 0.2s;
+        margin: 2% 8% 3% 8%; // aca darle la altura resposiva de las letras , el 0%
+      }
+    }
   }
 }
 
-aside {
+.cardInfoDetail {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,3 +159,4 @@ aside {
     }
   }
 }
+

@@ -50,7 +50,7 @@ export const Emuladores = () => {
     <>
       <h2 className="tituloPrincipal">Emuladores</h2>
 
-      <div className="div-nav_container-global">
+      <div className="div-nav_container-cards">
 
         <nav className="nav-itemListContainer">
           <p>Emuladores:</p>
@@ -83,7 +83,7 @@ export const Emuladores = () => {
           </ul>
         </nav>
 
-        <section className="container-global">
+        <section className="container-cards">
           <EmulatorListContainer emuladoresFiltrados={emuladoresFiltrados} />
         </section>
       </div>

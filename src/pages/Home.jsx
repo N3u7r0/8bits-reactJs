@@ -4,7 +4,7 @@ export const Home = () => {
   return (
     <>
       <h2 className="tituloPrincipal">Home</h2>
-      <section className="container-global">
+      <section className="div-flex">
         <h4>Nuevo ROM</h4>
         <form action="" method="get">
           <ul>
