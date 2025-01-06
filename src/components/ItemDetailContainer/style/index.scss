@@ -1,41 +1,49 @@
 .cardTv {
   margin-top: 1vh;
-
+  // control del parpadeo al iniciar la animacion.
+  color: transparent;
   .tv-flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s;
+    transition:  0.8s;
 
     .img-card {
       max-width: 80%;
-      border: solid 0.4vh var(--color-border-tv);
-      transition: border 0.7s, box-shadow 0.7s;
-    
+      border: solid 0.2vh var(--color-border-tv);
       z-index: 2;
-      transition: 0.2s;
+      transition: 0.9s;
+    }
+    .tv-parlante-a,
+    .tv-parlante-b {
+      display: none;
+      
     }
     .contenedor-botonera-logo {
       display: none;
+
     }
   }
 
+  /* efecto de la card con la tv */
   &:hover {
     background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
     box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
     margin: 2vh;
     border-radius: 10px;
     border: 0.4vh solid rgba(200, 0, 250, 0.6);
-    transition: all 0.4s;
+    transition: 0.5s;
+
     .tv-flex {
       border-radius: 20px;
       transition: all 0.5s;
       margin: 1% 10% 3% 10%;
       border: 0.5vh solid var(--color-border-tv);
-      box-shadow: 0px 0px 10px 5px var(--color-shadow);
+      box-shadow: 0px 0px 10px 7px var(--color-shadow);
       background-color: black;
       border-radius: 20px;
+      transition: 0.8s;
       // este contiene los parlantes y la pantalla
       .tv {
         display: flex;
@@ -45,16 +53,16 @@
         position: relative;
         width: 100%;
        
-        
-
         .tv-parlante-a,
         .tv-parlante-b {
+          display:inline;
           height: 13vmax;
           border-radius: 8px;
           position: relative;
-          border: 0.2vmax solid var(--color-border-tv);
-          box-shadow: 0px 0px 30px 5px rgba(200, 0, 250, 0.6);
+          border: 0.2vmax solid var( --color-border-tv-parlantes);
+          box-shadow: 0px 0px 6px 5px  var(--color-shadow);
           z-index: 1;
+          transition: 0.3s;
         }
 
         .tv-parlante-a {
@@ -67,6 +75,7 @@
       }
 
       .contenedor-botonera-logo {
+        display:inline;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -78,7 +87,6 @@
         .tv-logo {
           font-size: x-small;
           position: relative;
-          
           transform: translate(50%, -0.5vmax);
         }
 
@@ -90,11 +98,11 @@
       }
 
       .img-card {
-        border: solid 0.4vh var(--color-border-tv);
-        box-shadow: 0px 0px 30px 2px var(--color-shadow);
+        border: solid 0.4vh var( --color-border-tv-parlantes);
+        box-shadow: 0px 0px 15px 7px var(--color-shadow);
         border-radius: 25px;
-        transition: all 0.2s;
-        margin: 2% 8% 3% 8%; // aca darle la altura resposiva de las letras , el 0%
+        margin: 2% 8% 3% 8%;
+        transition: box-shadow 2s ,border 1.5s;
       }
     }
   }
