@@ -1,16 +1,20 @@
 :root {
+    --background-imagen: url("./assets/img_background/img_background.gif");
+  
     /* variables de TODOS los colores */
     --color-fuente: rgba(236, 171, 59, 0.8);
+    --color-navbar: rgba(200, 0, 250, 0.95);
     --color-footer: whitesmoke;
-    --color-shadow: rgba(200, 0, 250, 0.6);
-    --color-border: rgba(200, 0, 250, 0.8) ;
+    --color-border: rgba(200, 0, 250, 0.8);
     --color-border-tv-parlantes: rgba(200, 0, 200, 0.9);
+   /*   */
 
-    --color-card-background:rgba(200, 100, 200, 0.1);
-    --color-card-gradiante-mid: rgba(200, 0, 255,0.3);
-    --color-navbar:rgba(200, 0, 250, 0.95);
+    /* estas 4 variables son las q se tienen q apagar con el btn. */
+    --color-background-section: rgba(50, 0, 100, 0.72);
+    --color-card-gradiante-mid: rgba(200, 0, 255, 0.3);
+    --color-card-background: rgba(200, 100, 200, 0.1);
+    --color-shadow: rgba(200, 0, 250, 0.6);
 
-    --color-background-section:  rgba(50, 0, 100, 0.72)
 
 }
 
@@ -26,6 +30,8 @@
     font-size: medium;
     text-shadow: -2px 1px 1px rgb(0, 0, 0);
 
+
+
     h1,
     h3 {
         /* configuracion base del h1 y h3 */
@@ -34,10 +40,10 @@
         font-weight: 400;
         font-style: normal;
         font-variation-settings: "MORF" 15, "SHLN" 40.5;
-        font-size:xx-large;
+        font-size: xx-large;
         margin: 0%
     }
-   
+
     /* estylos de escrollbar */
     &::-webkit-scrollbar {
         width: 1.7vh;
@@ -66,7 +72,8 @@
         box-shadow: 0px 0px 30px 5px rgba(250, 162, 0, 0.5);
     }
 }
-main{
+
+main {
 
     display: flex;
     flex-direction: column;
@@ -75,4 +82,3 @@ main{
     gap: 1vh;
     overflow: hidden;
 }
-

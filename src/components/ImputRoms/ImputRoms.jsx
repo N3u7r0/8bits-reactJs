@@ -1,42 +1,30 @@
-import Swal from "sweetalert2";
+import { useState } from "react";
 
 export const ImputRoms = () => {
-  async function swalInput() {
-    const inputOptions = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({
-          Emuladores: "Emulador",
-          ROMs: "rom",
-        });
-      });
-    });
+  const [botonNeon, setBotonNeon] = useState(true);
 
-    const { value: selector } = await Swal.fire({
+  const logicaBtnNeon = () => {
+    const root = document.querySelector(":root");
+    if (botonNeon) {
+      root.style.setProperty("--color-background-section", "rgba(0, 0, 0, 0.1)");
+      root.style.setProperty("--color-card-gradiante-mid", "rgba(0, 0, 0, 0.1)");
+      root.style.setProperty("--color-card-background", "rgba(0, 0, 0, 0.1)");
+      root.style.setProperty("--color-shadow", "rgba(0, 0, 0, 0.1)");
      
-      toast: true,
-      position: "top-end",
-      text : "Que dato queres subir?",
-      showCancelButton: true,
-      cancelButtonText: "Cancelar",
-      confirmButtonText: "Subir",
-      input: "radio",
-
-      inputOptions,
-      inputValidator: (value) => {
-        if (!value) {
-          return "No seleccionaste ningun tipo de archivo archivo";
-        }
-      },
-    });
-
-    if (selector) {
-      Swal.fire({
-        toast: true,
-        position: "top-end",
-        html: `Selecionaste: ${selector}`,
-      });
+      
+    } else {
+      root.style.setProperty("--color-background-section", "rgba(50, 0, 100, 0.72)");
+      root.style.setProperty("--color-card-gradiante-mid", "rgba(200, 0, 255, 0.3)");
+      root.style.setProperty("--color-card-background", "rgba(200, 0, 250, 0.1)");
+      root.style.setProperty("--color-shadow", "rgba(200, 0, 250, 0.6)");
+      
     }
-  }
-  swalInput();
-  return <></>;
+    setBotonNeon(!botonNeon);
+  };
+
+  return (
+    <button onClick={logicaBtnNeon} type="button" className="btn_1up">
+      ♥♥♡
+    </button>
+  );
 };

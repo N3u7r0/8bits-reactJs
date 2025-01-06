@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ImputRoms } from "../ImputRoms/ImputRoms";
-
 import "./styles/style.css";
 
 export const NavBar = () => {
@@ -32,9 +31,7 @@ export const NavBar = () => {
           </Link>
         </li>
         {/* este btn va afuera de la ul para que no rompa el diseño de la navbar */}
-        <button onClick={() => ImputRoms()} type="button" className="btn_1up">
-          ♥♡♡
-        </button>
+        <ImputRoms />
       </ul>
     </nav>
   );
