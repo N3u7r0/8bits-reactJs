@@ -13,6 +13,7 @@
     --color-card-gradiante-mid: rgba(200, 0, 255, 0.3);
     --color-card-background: rgba(200, 100, 200, 0.1);
     --color-shadow: rgba(200, 0, 250, 0.6);
+    --color-bar: rgba(200, 0, 250, 0.95);
 
 
 }
@@ -51,8 +52,8 @@
 
     /* Estilizar el "thumb" de la barra de desplazamiento */
     &::-webkit-scrollbar-thumb {
-        background-color: rgba(250, 0, 196, 0.7);
-        border: solid 2px rgba(250, 0, 196, 0.9);
+        background-color: var(--color-bar);
+        border: solid 2px rgba(250, 0, 196, 0.3);
     }
 
     /* Estilizar el "track" de la barra de desplazamiento */
