@@ -1,6 +1,5 @@
 body {
   background-image: var(--background-imagen);
-  background-color: rgba(0, 0, 0, 0.99);
   background-position: center;
   background-size: cover;
   overflow: hidden;

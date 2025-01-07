@@ -62,7 +62,7 @@
   box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
   margin: 2vh;
   border-radius: 10px;
-  border: 0.4vh solid rgba(200, 0, 250, 0.6);
+  border: 0.4vh solid var(--color-border);
   transition: 0.5s;
 }
 .cardtv_cardIformeDetail .cardTv:hover .tv-flex {
@@ -136,7 +136,7 @@
 }
 .cardtv_cardIformeDetail .cardInfoDetail p {
   padding: 1vh;
-  border: solid 0.4vh rgba(200, 0, 250, 0.384);
+  border: solid 0.4vh var(--color-border);
   background-color: rgba(36, 32, 32, 0.762);
 }
 .cardtv_cardIformeDetail .fotos-contenedor {
@@ -148,12 +148,12 @@
   grid-column: span 2;
 }
 .cardtv_cardIformeDetail .fotos-contenedor .fotosGameplay {
-  border: 2px solid rgba(200, 0, 250, 0.4);
+  border: 2px solid var(--color-border);
   width: 20vw;
   transition: 0.2s;
 }
 .cardtv_cardIformeDetail .fotos-contenedor .fotosGameplay:hover {
-  border: 2px solid rgba(200, 0, 250, 0.4);
+  border: 3px solid var(--color-border);
   box-shadow: 1px 2px 10px 7px var(--color-shadow);
   border-radius: 10px;
   transform: scale(1.1);

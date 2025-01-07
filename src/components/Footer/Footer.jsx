@@ -3,7 +3,7 @@ import "./styles/style.css";
 export const Footer = () => {
   return (
     <footer>
-      <h4>esto va a ser un un footer</h4> 
+      <h4>Brian Fabian Sabatini</h4> 
     </footer>
   );
 };

@@ -5,5 +5,5 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #cfcfcf;
+  background-color: var(--color-footer);
 }/*# sourceMappingURL=style.css.map */
