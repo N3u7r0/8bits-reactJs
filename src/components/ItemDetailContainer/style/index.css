@@ -3,6 +3,13 @@
   grid-template-columns: auto auto;
   grid-template-rows: auto;
 }
+@media (max-width: 768px) {
+  .cardtv_cardIformeDetail {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15vh;
+  }
+}
 .cardtv_cardIformeDetail .cardTv {
   display: flex;
   flex-direction: column;
@@ -135,13 +142,17 @@
   margin: 2.3vh;
 }
 .cardtv_cardIformeDetail .cardInfoDetail p {
+  font-size: medium;
   padding: 1vh;
   border: solid 0.4vh var(--color-border);
   background-color: rgba(36, 32, 32, 0.762);
+  width: 50vw;
+  max-height: 20vh;
+  overflow-y: auto;
 }
 .cardtv_cardIformeDetail .fotos-contenedor {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 5.2vh;
   cursor: pointer;

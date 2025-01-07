@@ -26,10 +26,10 @@ export const ItemDetailContainer = ({ rom }) => {
               <p className="botonera">Ooooo</p>
             </div>
           </div>
-            <a type="button" className="btn" href={rom.link}>
+          <a type="button" className="btn" href={rom.link}>
             {" "}
             → {rom.titulo} ←
-          </a> 
+          </a>
         </article>
 
         <aside className="cardInfoDetail">
@@ -41,19 +41,13 @@ export const ItemDetailContainer = ({ rom }) => {
           <p>{rom.empresa}</p>
         </aside>
 
-         <aside className="fotos-contenedor">
-         
-         
-            {<img className="fotosGameplay" src={rom.foto_1} alt="" /> || (
-              <Spin />
-            )}
-            <img className="fotosGameplay" src={rom.foto_2} alt="" />
-            <img className="fotosGameplay" src={rom.foto_3} alt="" />
-         
-         </aside>
-
-       
-         
+        <aside className="fotos-contenedor">
+          {<img className="fotosGameplay" src={rom.foto_1} alt="" /> || (
+            <Spin />
+          )}
+          <img className="fotosGameplay" src={rom.foto_2} alt="" />
+          <img className="fotosGameplay" src={rom.foto_3} alt="" />
+        </aside>
       </div>
     </>
   );

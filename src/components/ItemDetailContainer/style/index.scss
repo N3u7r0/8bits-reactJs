@@ -3,6 +3,12 @@
   grid-template-columns: auto auto;
   grid-template-rows: auto;
 
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 15vh;
+  }
+
   .cardTv {
     display: flex;
     flex-direction: column;
@@ -45,13 +51,13 @@
       border-radius: 100px;
       margin-bottom: 1vh;
       transition: box-shadow 0.7s;
-  
+
       &:hover {
         background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
         box-shadow: 0px 0px 70px 5px rgba(200, 0, 250, 0.7);
         transition: all 0.4s;
       }
-  
+
       &:active {
         box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
         color: whitesmoke;
@@ -150,16 +156,20 @@
     margin: 2.3vh;
 
     p {
+      font-size: medium;
       padding: 1vh;
       border: solid 0.4vh var(--color-border);
       background-color: rgba(36, 32, 32, 0.762);
+      width: 50vw;
+      max-height: 20vh;
+      overflow-y: auto;
     }
   }
 
   //fotos.
   .fotos-contenedor {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 5.2vh;
     cursor: pointer;
@@ -181,7 +191,7 @@
         top: 40%;
         bottom: 60%;
         transform: scale(2.5);
-        border:none;
+        border: none;
         box-shadow: 0px 0px 0px 200px rgba(0, 0, 0, 0.8);
         cursor: none;
 
@@ -189,6 +199,4 @@
       }
     }
   }
-
- 
 }
