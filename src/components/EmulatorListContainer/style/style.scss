@@ -1,21 +1,18 @@
- .card-emuladores{
-
+.card-emuladores {
   .img-card-emuladores {
-    width: 15rem;
-    height: 15rem;
-    border-radius: 10%;
+    
+    max-height: 10rem;
+    border-radius: 18%;
   }
-  
+
   &:hover {
     ul {
-      justify-items: center;
-      align-items: center;
       .contenedor-texto-emuladores {
         width: 100%;
         padding: 0.2rem;
         text-align: left;
         border: solid 3px var(--color-border);
-        background-color: rgba(0, 0, 0,0.3);
+        background-color: rgba(0, 0, 0, 0.3);
         p:first-of-type {
           height: 6vh;
         }
@@ -28,6 +25,4 @@
       }
     }
   }
- }
- 
- 
+}

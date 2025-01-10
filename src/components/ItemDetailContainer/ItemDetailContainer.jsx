@@ -42,11 +42,10 @@ export const ItemDetailContainer = ({ rom }) => {
         </aside>
 
         <aside className="fotos-contenedor">
-          {<img className="fotosGameplay" src={rom.foto_1} alt="" /> || (
-            <Spin />
-          )}
-          <img className="fotosGameplay" src={rom.foto_2} alt="" />
-          <img className="fotosGameplay" src={rom.foto_3} alt="" />
+         
+           <Spin src={rom.foto_1}  alt={"foto emulador 1"} />
+           <Spin src={rom.foto_2}  alt={"foto emulador 2"} />
+           <Spin src={rom.foto_3}  alt={"foto emulador 3"} />
         </aside>
       </div>
     </>

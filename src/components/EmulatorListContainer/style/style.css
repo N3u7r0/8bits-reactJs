@@ -1,11 +1,6 @@
 .card-emuladores .img-card-emuladores {
-  width: 15rem;
-  height: 15rem;
-  border-radius: 10%;
-}
-.card-emuladores:hover ul {
-  justify-items: center;
-  align-items: center;
+  max-height: 10rem;
+  border-radius: 18%;
 }
 .card-emuladores:hover ul .contenedor-texto-emuladores {
   width: 100%;

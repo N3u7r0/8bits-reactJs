@@ -78,7 +78,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     margin: 1.4vh;
     gap: 1vh;
     overflow: hidden;
+    overflow: auto;
+  
 }

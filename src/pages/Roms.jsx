@@ -6,7 +6,7 @@ import { useRoms } from "../Hooks";
 import "./styles/style.css";
 
 export const Roms = () => {
-  const { roms } = useRoms();
+  const { roms} = useRoms();
   const [romsFiltrados, setRomsFiltrados] = useState([]);
   const { consola } = useParams("");
 

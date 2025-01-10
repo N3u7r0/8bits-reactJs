@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ImputRoms } from "../ImputRoms/ImputRoms";
+import { BtnDark } from "../BtnDark";
 import "./styles/style.css";
 
 export const NavBar = () => {
@@ -25,13 +25,9 @@ export const NavBar = () => {
             <button type="button">Emuladores</button>
           </Link>
         </li>
-        <li>
-          <Link to="/trucos">
-            <button type="button">Trucos</button>
-          </Link>
-        </li>
-        {/* este btn va afuera de la ul para que no rompa el diseño de la navbar */}
-        <ImputRoms />
+       
+      {/* este btn va afuera de la ul para que no rompa el diseño de la navbar */}
+      <BtnDark />
       </ul>
     </nav>
   );

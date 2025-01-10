@@ -1,27 +1,38 @@
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase";
+import { DataContext } from "../components/context/DataContext";
 
-//comentamos con camelcase por que es un custom hook.
+// Comentamos con camelcase porque es un custom hook.
 export const useRoms = () => {
-  const [roms, setRoms] = useState([]);
-  //llamo a la base de datos en un useEffect, para traer la coleccion de roms.
+  const { roms, setRoms } = useContext(DataContext);
+
   useEffect(() => {
-    // aca es donde se hace la llamada y le digo q de mi base de datos de firebase me traiga una coleccion de roms.
+    // Comprobar si los datos existen en DataContext.
+    const contextRoms = roms;
+    if (contextRoms.length > 0) {
+      const parseRoms = contextRoms;
+      setRoms(parseRoms);
+      console.log("No hay llamada!!! Datos cargados desde sessionStorage.");
+      return; // No se hace la llamada a Firebase si los datos están el dataContext.
+    }
+    // Aquí es donde se hace la llamada y le digo a Firebase que me traiga la colección de roms.
     const romsCollection = collection(db, "roms");
 
-    //esto es una promesa como axios o fech. le pasamos la coleccion de roms que guardamos en romsCollection.
     getDocs(romsCollection)
       .then((snapshot) => {
-        setRoms(
-          //guardo la coleccion de roms en snapshot. Se llama de esta manera por que entra encriptado por defecto desde firebase.
-          //esto siempre se llama snapshot. y se pide de la misma manera.
-          snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
-        );
+        const newRoms = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setRoms(newRoms);
+        console.log("Llamada a Firebase realizada y datos actualizados.");
+        // Guardar los datos en sessionStorage.
+        sessionStorage.setItem("roms", JSON.stringify(newRoms));
       })
       .catch((err) => console.log(err))
-      .finally(/* aca creo un un if para que se ejecute el spin de loading.!! */);
-  }, []);
+      .finally(/* Aquí podrías agregar lógica adicional si lo necesitas. */);
+  }, [setRoms]); // El array de dependencias vacío asegura que el efecto se ejecute solo una vez.
 
   return { roms };
 };

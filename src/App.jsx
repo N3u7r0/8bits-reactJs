@@ -1,9 +1,11 @@
 import { LayoutMain } from "./Layout";
-
+import { DataProvider } from "./components";
 function App() {
   return (
     <>
-      <LayoutMain />
+      <DataProvider>
+        <LayoutMain />
+      </DataProvider>
     </>
   );
 }

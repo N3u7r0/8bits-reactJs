@@ -9,7 +9,7 @@ export const Emuladores = () => {
   const { emuladores } = useEmulators();
   const [emuladoresFiltrados, setEmuladoresFiltrados] = useState([]);
   const { consola } = useParams("");
-  console.log(consola);
+ 
 
   useEffect(() => {
     let filteredEmulators = emuladores;

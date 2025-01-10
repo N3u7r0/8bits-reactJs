@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
 import{doc,getDoc}  from "firebase/firestore";
 import { db } from "../firebase";
 import { useParams } from "react-router";
-
+import { DataContext } from "../components/context/DataContext";
 export const useRomsById = () => {
+   const { rom, setRom } = useContext(DataContext);
    const {id} = useParams();
-  const [rom, setRom] = useState([]);  
-
+ 
   useEffect(() => {
     // aca es donde se hace la llamada y le digo q de mi base de datos de firebase me traiga una coleccion de roms.
     const romsCollection = doc(db, "roms",id);

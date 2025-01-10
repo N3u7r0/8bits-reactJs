@@ -1,18 +1,18 @@
 import { useState } from "react";
 
-export const ImputRoms = () => {
+export const BtnDark = () => {
   const [botonNeon, setBotonNeon] = useState(true);
 
   const logicaBtnNeon = () => {
     const root = document.querySelector(":root");
     if (botonNeon) {
-      root.style.setProperty("--color-fuente", "rgba(240, 240, 250, 0.8)");
+      root.style.setProperty("--color-fuente", "rgba(240, 240, 250, 0.7)");
       root.style.setProperty("--color-navbar", "rgba(151, 151, 151, 0.1)");
       root.style.setProperty("--color-footer", "rgb(6,6,6)");
       root.style.setProperty("--color-border", "rgba(151, 151, 151, 0.8)");
       root.style.setProperty("--color-border-tv-parlantes", "rgba(255, 190, 0, 0.9)");
       root.style.setProperty("--color-background-section", "rgba(0, 0, 0, 0.9)");
-      root.style.setProperty("--color-card-gradiante-mid", "rgba(211, 211, 211, 0.05)");
+      root.style.setProperty("--color-card-gradiante-mid", "rgba(211, 211, 211, 0npm.05)");
       root.style.setProperty("--color-card-background", "rgba(0, 0, 0, 0.1)");
       root.style.setProperty("--color-shadow", "rgba(0, 0, 0, 0.6)");
       root.style.setProperty("--color-bar", " rgba(111, 111, 111, 0.9)");
