@@ -1,6 +1,6 @@
 .cardtv_cardIformeDetail {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 5fr auto;
   grid-template-rows: auto;
   overflow:auto;
   width:100%;
@@ -16,6 +16,8 @@
     justify-content: center;
     align-items: center;
     margin-top: 1vh;
+    gap:0.5vh;
+   
     // control del parpadeo al iniciar la animacion.
     color: transparent;
     .tv-flex {
@@ -40,7 +42,7 @@
       }
     }
     .btn {
-      margin: 0.5vh;
+    
       font-size: x-small;
       display: flex;
       justify-content: center;
@@ -155,6 +157,7 @@
     align-items: center;
     gap: 1vh;
     margin: 2.3vh;
+   
     overflow: block;
 
     p {

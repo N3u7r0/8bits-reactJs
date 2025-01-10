@@ -4,7 +4,7 @@
   
     /* variables de TODOS los colores */
     /* a tener en cuenta q se tendrian q modificar los valores del btn neon si se cambia aca, xq esto es solo primera instancia */
-    --color-fuente: rgba(236, 171, 59, 0.8);
+    --color-fuente: rgba(236, 171, 20, 0.7);
     --color-navbar: rgba(200, 0, 250, 0.95);
     --color-footer: rgb(245,245,245);
     --color-border: rgba(200, 0, 250, 0.8);

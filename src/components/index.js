@@ -6,3 +6,4 @@ export * from "./EmulatorListContainer";
 export * from "./Spin";
 export * from "./BtnDark";
 export * from "./context";
+export * from "./forms"

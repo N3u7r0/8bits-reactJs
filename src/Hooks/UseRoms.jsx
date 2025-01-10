@@ -8,7 +8,7 @@ export const useRoms = () => {
   const { roms, setRoms } = useContext(DataContext);
 
   useEffect(() => {
-    // Comprobar si los datos existen en DataContext.
+    // Comprueno si los datos existen en DataContext.
     const contextRoms = roms;
     if (contextRoms.length > 0) {
       const parseRoms = contextRoms;
@@ -16,7 +16,8 @@ export const useRoms = () => {
       console.log("No hay llamada!!! Datos cargados desde sessionStorage.");
       return; // No se hace la llamada a Firebase si los datos están el dataContext.
     }
-    // Aquí es donde se hace la llamada y le digo a Firebase que me traiga la colección de roms.
+
+    // aca le digo a Firebase que me traiga la colección de roms.
     const romsCollection = collection(db, "roms");
 
     getDocs(romsCollection)
@@ -25,14 +26,12 @@ export const useRoms = () => {
           id: doc.id,
           ...doc.data(),
         }));
+        // Actualizo el estado de roms.
         setRoms(newRoms);
-        console.log("Llamada a Firebase realizada y datos actualizados.");
-        // Guardar los datos en sessionStorage.
-        sessionStorage.setItem("roms", JSON.stringify(newRoms));
+        console.log("Llamada a Firebase realizada y datos actualizados en context.");
       })
-      .catch((err) => console.log(err))
-      .finally(/* Aquí podrías agregar lógica adicional si lo necesitas. */);
-  }, [setRoms]); // El array de dependencias vacío asegura que el efecto se ejecute solo una vez.
+      .catch((err) => console.log(err));
+  }, [setRoms]);
 
   return { roms };
 };

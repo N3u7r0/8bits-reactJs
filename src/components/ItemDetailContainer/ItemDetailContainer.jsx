@@ -26,6 +26,7 @@ export const ItemDetailContainer = ({ rom }) => {
               <p className="botonera">Ooooo</p>
             </div>
           </div>
+          <p>↓</p>
           <a type="button" className="btn" href={rom.link}>
             {" "}
             → {rom.titulo} ←

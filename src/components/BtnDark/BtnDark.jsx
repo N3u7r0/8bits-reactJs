@@ -6,7 +6,7 @@ export const BtnDark = () => {
   const logicaBtnNeon = () => {
     const root = document.querySelector(":root");
     if (botonNeon) {
-      root.style.setProperty("--color-fuente", "rgba(240, 240, 250, 0.7)");
+      root.style.setProperty("--color-fuente", "rgba(255, 170, 70, 0.8)");
       root.style.setProperty("--color-navbar", "rgba(151, 151, 151, 0.1)");
       root.style.setProperty("--color-footer", "rgb(6,6,6)");
       root.style.setProperty("--color-border", "rgba(151, 151, 151, 0.8)");
@@ -17,7 +17,7 @@ export const BtnDark = () => {
       root.style.setProperty("--color-shadow", "rgba(0, 0, 0, 0.6)");
       root.style.setProperty("--color-bar", " rgba(111, 111, 111, 0.9)");
     } else {
-      root.style.setProperty("--color-fuente", "rgba(236, 171, 59, 0.8)");
+      root.style.setProperty("--color-fuente", "rgba(236, 171, 20, 0.7)");
       root.style.setProperty("--color-navbar"," rgba(200, 0, 250, 0.95)");
       root.style.setProperty("--color-footer", "rgb(245,245,245)");
       root.style.setProperty("--color-border", "rgba(200, 0, 250, 0.8)");

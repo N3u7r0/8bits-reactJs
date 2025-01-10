@@ -1,16 +1,25 @@
-import { createContext, useState } from "react";
+import { createContext, useState,useEffect } from "react";
 
 export const DataContext = createContext();
 //junto todos los estados en el contexto para que cuando salga de un componente a otro no se pierdan los datos.
 export const DataProvider = ({ children }) => {
-  const [roms, setRoms] = useState([]);
-  console.log(roms);
-
-  const [emuladores, setEmuladores] = useState([]);
-  console.log(emuladores);
-
   const [rom, setRom] = useState([]);
-  console.log(rom);
+  const [roms, setRoms] = useState([]);
+  const [emuladores, setEmuladores] = useState([]);
+
+
+
+
+  //guardamos en el local storage
+  useEffect(() => {
+    localStorage.setItem("rom", JSON.stringify(rom));
+  }, [rom]);
+  useEffect(() => {
+    localStorage.setItem("roms", JSON.stringify(roms));
+  }, [roms]);
+  useEffect(() => {
+    localStorage.setItem("emuladores", JSON.stringify(emuladores));
+  }, [emuladores]);
 
   //siempre le pasamos un obj xq es mas facil de trabajar y es practico si se quiere escalar.Manejarlos como objetos podes mandar muchos, como una expresion regular solo uno.
   return (
