@@ -1,43 +1,44 @@
 import { useState } from "react";
-import "./styles/style.css";
+import { collection, addDoc } from "firebase/firestore"; // Asegúrate de importar Firestore
+import { db } from "../../firebase"; // Importar la configuración de Firestore
+
 
 export function FormRoms() {
-  /* definimos el estado inputs para manejar los valores iniciales. */
-  const [inputs, setInputs] = useState({
-    nombre: "",
+  const [inputsRom, setInputsRom] = useState({
+    titulo: "",
     descripcion: "",
-    descripcionExtendida: "",
-    año: "",
-    empresa: "",
+    descripcion_detail: "",
+    lanzamiento: "",
     link: "",
+    empresa: "",
+    fotoAlt: "",
     fotoPortada: null,
-    fotoGameplays: [null, null, null],
+    foto_1: null,
+    foto_2: null,
+    foto_3: null,
   });
 
-  /* maneja el cambio de los inputs de texto */
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInputs((prevInputs) => ({
-      ...prevInputs,
-      [name]: value,
+    setInputsRom((inputsRom) => ({
+      ...inputsRom,
+      [name]: value || '',
     }));
   };
 
-  /* maneja el cambio de los inputs de la foto portada */
   const handleFileChange = (e) => {
     const { name, files } = e.target;
-    setInputs((prevInputs) => ({
-      ...prevInputs,
-      [name]: files[0],
+    setInputsRom((inputsRom) => ({
+      ...inputsRom,
+      [name]: files[0] || null,
     }));
   };
 
-  /* maneja el cambio de los inputs de las fotos del gameplays */
   const handleGameplayFileChange = (index, e) => {
     const { files } = e.target;
-    setInputs((prevInputs) => {
+    setInputsRom((prevInputs) => {
       const updatedGameplays = [...prevInputs.fotoGameplays];
-      updatedGameplays[index] = files[0];
+      updatedGameplays[index] = files[0] || null;
       return {
         ...prevInputs,
         fotoGameplays: updatedGameplays,
@@ -45,37 +46,22 @@ export function FormRoms() {
     });
   };
 
-  /* La función handleSubmit se ejecuta cuando se envía el formulario.
-   Previene la acción predeterminada del formulario (recargar la página),
-   convierte los valores de los inputs a un array y los imprime en la consola. */
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formDataArray = Object.values(inputs);
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Previene acción predeterminada
+    const datosTexto = ["titulo", "descripcion", "descripcion_detail", "lanzamiento", "link", "empresa"];
+    const camposLlenos = datosTexto.every((campo) => inputsRom[campo] !== "");
 
-    // Filtra los campos vacíos
-    const filteredData = formDataArray.filter((item) => item !== "");
-
-    if (filteredData.length !== formDataArray.length) {
-      console.error("Hay campos vacíos en el formulario.");
-      alert("Por favor, complete todos los campos antes de enviar.");
-      return;
+    if (!camposLlenos) {
+      console.error("Hay campos de texto vacíos en el formulario.");
+    } else {
+      console.log("Formulario enviado con éxito:", inputsRom);
+      try {
+        const docRef = await addDoc(collection(db, "roms"), inputsRom);
+        console.log("Documento añadido con ID: ", docRef.id);
+      } catch (err) {
+        console.error("Error al añadir el documento: ", err);
+      }
     }
-
-    console.log("Datos del formulario ROMs:", formDataArray);
-
-    // Resetea los campos del formulario
-    setInputs({
-      nombre: "",
-      descripcion: "",
-      descripcionExtendida: "",
-      año: "",
-      empresa: "",
-      link: "",
-      fotoPortada: null,
-      fotoGameplays: [null, null, null],
-    });
-
-    // Aquí puedes llamar a updateRoms si necesitas enviar los datos a Firestore
   };
 
   return (
@@ -84,42 +70,42 @@ export function FormRoms() {
       <form onSubmit={handleSubmit}>
         <ul>
           <li>
-            <p>Nombre</p>
+            <p>Título</p>
             <input
-              name="nombre"
+              name="titulo"
               type="text"
-              placeholder="Nombre del juego."
-              value={inputs.nombre}
+              placeholder="Título del juego."
+              value={inputsRom.titulo || ''} 
               onChange={handleChange}
             />
           </li>
           <li>
-            <p>Descripcion</p>
+            <p>Descripción</p>
             <input
               name="descripcion"
               type="text"
-              placeholder="Descripcion de la card del juego."
-              value={inputs.descripcion}
+              placeholder="Descripción de la card del juego."
+              value={inputsRom.descripcion || ''}
               onChange={handleChange}
             />
           </li>
           <li>
-            <p>Descripcion extendida</p>
+            <p>Descripción extendida</p>
             <input
-              name="descripcionExtendida"
+              name="descripcion_detail"
               type="text"
-              placeholder="Descripcion extendida del juego."
-              value={inputs.descripcionExtendida}
+              placeholder="Descripción extendida del juego."
+              value={inputsRom.descripcion_detail || ''}
               onChange={handleChange}
             />
           </li>
           <li>
             <p>Año de lanzamiento</p>
             <input
-              name="año"
+              name="lanzamiento"
               type="text"
               placeholder="Año de lanzamiento del juego."
-              value={inputs.año}
+              value={inputsRom.lanzamiento || ''}
               onChange={handleChange}
             />
           </li>
@@ -128,8 +114,8 @@ export function FormRoms() {
             <input
               name="empresa"
               type="text"
-              placeholder="fabricante del juego."
-              value={inputs.empresa}
+              placeholder="Fabricante del juego."
+              value={inputsRom.empresa || ''}
               onChange={handleChange}
             />
           </li>
@@ -139,7 +125,7 @@ export function FormRoms() {
               name="link"
               type="text"
               placeholder="Link de descarga."
-              value={inputs.link}
+              value={inputsRom.link || ''}
               onChange={handleChange}
             />
           </li>
@@ -154,20 +140,20 @@ export function FormRoms() {
             </div>
           </li>
           <li>
-            <p>foto gameplays</p>
+            <p>Fotos de gameplays</p>
             <div className="contenedorFotosForms">
               <input
-                name="fotoGameplay1"
+                name="foto_1"
                 type="file"
                 onChange={(e) => handleGameplayFileChange(0, e)}
               />
               <input
-                name="fotoGameplay2"
+                name="foto_2"
                 type="file"
                 onChange={(e) => handleGameplayFileChange(1, e)}
               />
               <input
-                name="fotoGameplay3"
+                name="foto_3"
                 type="file"
                 onChange={(e) => handleGameplayFileChange(2, e)}
               />
