@@ -75,7 +75,7 @@ export function FormEuladores() {
   };
 
   return (
-    <article className="contenedorForms">
+    <article className="contenedor_Forms">
       <h5>Nuevo Emulador</h5>
       <form onSubmit={handleSubmit}>
         <ul>

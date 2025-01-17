@@ -1,3 +1,4 @@
+import { BtnDeleteItem } from "../BtnDeleteItem/BtnDeleteItem";
 import { Spin } from "../Spin";
 import "./style/style.css";
 
@@ -30,6 +31,7 @@ export const EmulatorListContainer = ({ emuladoresFiltrados }) => {
                 <a type="button" className="btn" href={emulador.link}>
                   link
                 </a>
+                <BtnDeleteItem idItem ={emulador.id}/> 
               </li>
             </ul>
           </article>

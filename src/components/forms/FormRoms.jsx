@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { collection, addDoc } from "firebase/firestore"; // Asegúrate de importar Firestore
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase"; // Importar la configuración de Firestore
-
+import "./styles/style.css";
 
 export function FormRoms() {
   const [inputsRom, setInputsRom] = useState({
@@ -11,7 +12,6 @@ export function FormRoms() {
     lanzamiento: "",
     link: "",
     empresa: "",
-    fotoAlt: "",
     fotoPortada: null,
     foto_1: null,
     foto_2: null,
@@ -22,7 +22,7 @@ export function FormRoms() {
     const { name, value } = e.target;
     setInputsRom((inputsRom) => ({
       ...inputsRom,
-      [name]: value || '',
+      [name]: value || "",
     }));
   };
 
@@ -34,16 +34,12 @@ export function FormRoms() {
     }));
   };
 
-  const handleGameplayFileChange = (index, e) => {
-    const { files } = e.target;
-    setInputsRom((prevInputs) => {
-      const updatedGameplays = [...prevInputs.fotoGameplays];
-      updatedGameplays[index] = files[0] || null;
-      return {
-        ...prevInputs,
-        fotoGameplays: updatedGameplays,
-      };
-    });
+  const uploadFile = async (file, fileName) => {
+    const storage = getStorage();
+    const storageRef = ref(storage, `roms/${fileName}`);
+    await uploadBytes(storageRef, file);
+    const downloadURL = await getDownloadURL(storageRef);
+    return downloadURL;
   };
 
   const handleSubmit = async (e) => {
@@ -54,18 +50,35 @@ export function FormRoms() {
     if (!camposLlenos) {
       console.error("Hay campos de texto vacíos en el formulario.");
     } else {
-      console.log("Formulario enviado con éxito:", inputsRom);
       try {
-        const docRef = await addDoc(collection(db, "roms"), inputsRom);
+        const fileFields = ["fotoPortada", "foto_1", "foto_2", "foto_3"];
+        const uploadPromises = fileFields.map(async (field) => {
+          if (inputsRom[field]) {
+            const fileName = `${inputsRom.titulo}_${field}`;
+            const downloadURL = await uploadFile(inputsRom[field], fileName);
+            return { [field]: downloadURL };
+          }
+          return { [field]: null };
+        });
+
+        const fileURLs = await Promise.all(uploadPromises);
+        const updatedInputsRom = { ...inputsRom, ...Object.assign({}, ...fileURLs) };
+
+        const docRef = await addDoc(collection(db, "roms"), updatedInputsRom);
         console.log("Documento añadido con ID: ", docRef.id);
+          // f5 de la pagina para q tome el cambio
+      
       } catch (err) {
         console.error("Error al añadir el documento: ", err);
+      }finally{
+        //f5 de la pagina para q tome el cambio
+        window.location.reload(); 
       }
     }
   };
 
   return (
-    <article className="contenedorForms">
+    <article className="contenedor_Forms">
       <h5>Nuevo ROM</h5>
       <form onSubmit={handleSubmit}>
         <ul>
@@ -75,7 +88,7 @@ export function FormRoms() {
               name="titulo"
               type="text"
               placeholder="Título del juego."
-              value={inputsRom.titulo || ''} 
+              value={inputsRom.titulo || ""}
               onChange={handleChange}
             />
           </li>
@@ -85,7 +98,7 @@ export function FormRoms() {
               name="descripcion"
               type="text"
               placeholder="Descripción de la card del juego."
-              value={inputsRom.descripcion || ''}
+              value={inputsRom.descripcion || ""}
               onChange={handleChange}
             />
           </li>
@@ -95,7 +108,7 @@ export function FormRoms() {
               name="descripcion_detail"
               type="text"
               placeholder="Descripción extendida del juego."
-              value={inputsRom.descripcion_detail || ''}
+              value={inputsRom.descripcion_detail || ""}
               onChange={handleChange}
             />
           </li>
@@ -105,7 +118,7 @@ export function FormRoms() {
               name="lanzamiento"
               type="text"
               placeholder="Año de lanzamiento del juego."
-              value={inputsRom.lanzamiento || ''}
+              value={inputsRom.lanzamiento || ""}
               onChange={handleChange}
             />
           </li>
@@ -115,7 +128,7 @@ export function FormRoms() {
               name="empresa"
               type="text"
               placeholder="Fabricante del juego."
-              value={inputsRom.empresa || ''}
+              value={inputsRom.empresa || ""}
               onChange={handleChange}
             />
           </li>
@@ -125,38 +138,22 @@ export function FormRoms() {
               name="link"
               type="text"
               placeholder="Link de descarga."
-              value={inputsRom.link || ''}
+              value={inputsRom.link || ""}
               onChange={handleChange}
             />
           </li>
           <li>
             <p>Foto portada</p>
             <div className="contenedorFotosForms">
-              <input
-                name="fotoPortada"
-                type="file"
-                onChange={handleFileChange}
-              />
+              <input name="fotoPortada" type="file" onChange={handleFileChange} />
             </div>
           </li>
           <li>
             <p>Fotos de gameplays</p>
             <div className="contenedorFotosForms">
-              <input
-                name="foto_1"
-                type="file"
-                onChange={(e) => handleGameplayFileChange(0, e)}
-              />
-              <input
-                name="foto_2"
-                type="file"
-                onChange={(e) => handleGameplayFileChange(1, e)}
-              />
-              <input
-                name="foto_3"
-                type="file"
-                onChange={(e) => handleGameplayFileChange(2, e)}
-              />
+              <input name="foto_1" type="file" onChange={handleFileChange} />
+              <input name="foto_2" type="file" onChange={handleFileChange} />
+              <input name="foto_3" type="file" onChange={handleFileChange} />
             </div>
           </li>
         </ul>

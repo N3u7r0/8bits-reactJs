@@ -1,18 +1,20 @@
-.contenedorForms {
+.contenedor_Forms {
   display: flex;
   margin: 1vh;
   flex-direction: column;
   width: 50vh;
   border: solid 2px var(--color-border);
   box-shadow: 0px 0px 10px 1px var(--color-shadow);
+
+
   form {
     display: flex;
     flex-direction: column;
     border: solid 2px var(--color-border);
     margin: 0vh 4vh 4vh 4vh;
     background-color: var(--color-background-section);
-
     box-shadow: 0px 0px 10px 1px var(--color-shadow);
+
     ul {
       display: flex;
       flex-direction: column;

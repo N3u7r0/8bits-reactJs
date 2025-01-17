@@ -1,12 +1,14 @@
 import { Spin } from "../Spin";
 import "./style/index.css";
-
+import { BtnDeleteItem } from "../BtnDeleteItem/BtnDeleteItem";
 export const ItemDetailContainer = ({ rom }) => {
   return rom?.length === 0 ? (
     <Spin />
   ) : (
     <>
       <div className="cardtv_cardIformeDetail">
+        <BtnDeleteItem idItem={rom.id} />
+
         <article key={rom.id} className="cardTv">
           <h3>{rom.titulo}</h3>
 
@@ -43,10 +45,9 @@ export const ItemDetailContainer = ({ rom }) => {
         </aside>
 
         <aside className="fotos-contenedor">
-         
-           <Spin src={rom.foto_1}  alt={"foto emulador 1"} />
-           <Spin src={rom.foto_2}  alt={"foto emulador 2"} />
-           <Spin src={rom.foto_3}  alt={"foto emulador 3"} />
+          <Spin src={rom.foto_1} alt={"foto emulador 1"} />
+          <Spin src={rom.foto_2} alt={"foto emulador 2"} />
+          <Spin src={rom.foto_3} alt={"foto emulador 3"} />
         </aside>
       </div>
     </>
