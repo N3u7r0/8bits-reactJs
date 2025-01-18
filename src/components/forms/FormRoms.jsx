@@ -5,6 +5,7 @@ import { db } from "../../firebase"; // Importar la configuración de Firestore
 import "./styles/style.css";
 
 export function FormRoms() {
+  //guardo los datos del formulario en un estado
   const [inputsRom, setInputsRom] = useState({
     titulo: "",
     descripcion: "",
@@ -18,60 +19,84 @@ export function FormRoms() {
     foto_3: null,
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  //desestructuro el nombre y valor del input.
+  const handleChange = (input) => {
+    const { name, value } = input.target;
     setInputsRom((inputsRom) => ({
       ...inputsRom,
       [name]: value || "",
     }));
   };
 
-  const handleFileChange = (e) => {
-    const { name, files } = e.target;
+  //desestructuro el nombre y valor del input de las fotos.
+  const handleFileChange = (inputFoto) => {
+    const { name, files } = inputFoto.target;
     setInputsRom((inputsRom) => ({
       ...inputsRom,
       [name]: files[0] || null,
     }));
   };
 
-  const uploadFile = async (file, fileName) => {
+//subo la foto a firebase
+  const uploadFile = async (foto, nombreDeLaFotoENFiresbase) => {
+    //instacia de guardado
     const storage = getStorage();
-    const storageRef = ref(storage, `roms/${fileName}`);
-    await uploadBytes(storageRef, file);
+    //refencia a la ubicacion de la foto en firebase
+    const storageRef = ref(storage, `roms/${nombreDeLaFotoENFiresbase}`);
+    //subo la foto
+    await uploadBytes(storageRef, foto);
+    //obtengo la url de la foto
     const downloadURL = await getDownloadURL(storageRef);
+    //retorno la url para usarlo en el handleSUbmit.
     return downloadURL;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault(); // Previene acción predeterminada
-    const datosTexto = ["titulo", "descripcion", "descripcion_detail", "lanzamiento", "link", "empresa"];
-    const camposLlenos = datosTexto.every((campo) => inputsRom[campo] !== "");
+
+//funcion para subir el formulario a firebase.
+  const handleSubmit = async (formulario) => {
+    //evito que se recargue la pagina para que le de tiempo a subir el dato.
+    formulario.preventDefault();
+    //array con los campos de texto que no pueden estar vacios.
+        const camposTextoExclutentes = ["titulo", "descripcion", "descripcion_detail", "lanzamiento", "link", "empresa"];
+    const camposLlenos = camposTextoExclutentes.every((campo) => inputsRom[campo] !== "");
+
+
 
     if (!camposLlenos) {
+      //si hay campos vacios muestro un error en la consola.
       console.error("Hay campos de texto vacíos en el formulario.");
     } else {
+      //si no hay campos vacios subo el formulario a firebase.
       try {
-        const fileFields = ["fotoPortada", "foto_1", "foto_2", "foto_3"];
-        const uploadPromises = fileFields.map(async (field) => {
-          if (inputsRom[field]) {
-            const fileName = `${inputsRom.titulo}_${field}`;
-            const downloadURL = await uploadFile(inputsRom[field], fileName);
-            return { [field]: downloadURL };
+        //referencia a los campos de las fotos.
+        const camposFotos = ["fotoPortada", "foto_1", "foto_2", "foto_3"];
+        //promesas de subida de las fotos.
+        const uploadPromesas = camposFotos.map(async (foto) => {
+          if (inputsRom[foto]) {
+            const fileName = `${inputsRom.titulo}_${foto}`;
+            const downloadURL = await uploadFile(inputsRom[foto], fileName);
+            //retorno un objeto con el nombre de la foto y la url de la foto.
+            return { [foto]: downloadURL };
           }
-          return { [field]: null };
+            //si no subio la foto retorno un null para controlar el error
+          return { [foto]: null };
         });
+       //guardo las url de las fotos en un objeto.
+        const fotoURLs = await Promise.all(uploadPromesas);
+        //actualizo el estado de las fotos con las url de las fotos. (... para desestructurar el objeto (todos los inputsRom y todas las fotos))
+        const updatedInputsRom = { ...inputsRom, ...Object.assign({}, ...fotoURLs) };
 
-        const fileURLs = await Promise.all(uploadPromises);
-        const updatedInputsRom = { ...inputsRom, ...Object.assign({}, ...fileURLs) };
 
+        //subo el formulario a firebase.
         const docRef = await addDoc(collection(db, "roms"), updatedInputsRom);
+
         console.log("Documento añadido con ID: ", docRef.id);
           // f5 de la pagina para q tome el cambio
       
       } catch (err) {
         console.error("Error al añadir el documento: ", err);
       }finally{
-        //f5 de la pagina para q tome el cambio
+        //refresh de la pagina para q tome el cambio despues de que suba el formulario.
         window.location.reload(); 
       }
     }

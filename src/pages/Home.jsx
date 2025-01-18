@@ -1,7 +1,6 @@
 
-
-import { FormEuladores } from "../components";
-import { FormRoms } from "../components/forms/formRoms";
+import { FormEmuladores } from "../components/forms";
+import { FormRoms } from "../components/forms";
 import "./styles/style.css";
 
 export const Home = () => {
@@ -14,7 +13,7 @@ export const Home = () => {
       <section className="div-flex">
 
       <FormRoms />
-      <FormEuladores />
+      <FormEmuladores />
        
       </section>
     </>

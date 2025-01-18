@@ -1,6 +1,6 @@
 import { Spin } from "../Spin";
 import "./style/index.css";
-import { BtnDeleteItem } from "../BtnDeleteItem/BtnDeleteItem";
+import { BtnDeleteItem } from "../BtnDeleteItem";
 export const ItemDetailContainer = ({ rom }) => {
   return rom?.length === 0 ? (
     <Spin />
